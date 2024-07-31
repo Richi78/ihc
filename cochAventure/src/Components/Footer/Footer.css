@@ -1,3 +1,7 @@
+.foooter {
+    min-height: 10rem;
+}
+
 .up-section {
     padding: 1rem 0rem;
     display: flex;

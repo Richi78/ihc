@@ -24,7 +24,6 @@ const Ruta = () => {
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
             </p>
-            
           </div>
         </div>
       </div>

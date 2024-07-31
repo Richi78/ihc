@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="foooter">
       <div className="up-section">
         <div className="left-section">
           <h2>Contáctate con nosotros</h2>
