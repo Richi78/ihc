@@ -1,0 +1,195 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border-bottom: 2px solid #ccc;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.cerrar-sesion {
+    background-color: #4c0c1b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4c0c1b;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: -1px;
+}
+
+.search-icon {
+    font-size: 18px;
+}
+
+.destinos h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.destinos h2 {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.paquetes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.paquete {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 220px;
+}
+
+.paquete img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.paquete .info {
+    padding: 15px;
+    text-align: left;
+}
+
+.paquete .info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.paquete .info p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.paquete .precio {
+    font-size: 16px;
+    color: #4c0c1b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mas-info {
+    background-color: #e8e8e8;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #ccc;
+}
+
+footer .contacto {
+    font-size: 14px;
+}
+
+footer .copy {
+    font-size: 12px;
+}
+
+footer .social img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .paquetes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paquete {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
