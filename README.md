@@ -1,10 +1,11 @@
 luego de clonar el repositorio ingresar al directorio 
-    cd cochAventure 
+
+    # cd cochAventure 
 
 luego instalar paquetes
-    npm install
+    # npm install
 
 para iniciar el servidor
-    npm run dev
+    # npm run dev
 
 
