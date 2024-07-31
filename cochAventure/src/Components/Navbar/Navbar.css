@@ -34,10 +34,3 @@
     justify-content: right;
     align-items: center;
 }
-
-.nav-options ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
