@@ -2,10 +2,11 @@
 
 :root{
     /*Paleta de colores*/
-    --azul-oscuro: hsl(212, 75%, 16%);
-    --azul-marino: #144272;
-    --azul-primario: #205295;
-    --azul-claro: #2C74B3;
+    --azul-oscuro: #01403A;
+    --azul-marino: #026873;
+    --azul-primario: #8FA1D9;
+    --azul-claro: #BDB0D9;
+    --rosa: #F2A7B5;
     --white: #f8f9fa;
     --negro: #343a40;
     --gris: #cdcdcd;

@@ -1,0 +1,27 @@
+.up-section {
+    padding: 1rem 0rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+}
+
+.up-section .left-section {
+    /* background-color: red; */
+    padding-left: 1rem;
+}
+
+.up-section .right-section {
+    /* background-color: red; */
+    display: flex;
+    gap: 1rem;
+    padding-top: 4rem;
+    padding-right: 1rem;
+}
+
+.down-section {
+    background-color: #949495;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+}

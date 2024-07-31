@@ -1,0 +1,35 @@
+.target-title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.target-title h1{
+    border-bottom: 5px solid black;
+}
+
+.target-routes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.target-left {
+    width: 40vw;
+    padding: 2rem 2rem;
+}
+
+.target-right {
+    width: 60vw;
+    padding: 2rem 15rem;
+}
+
+.target-right h1{
+    padding-bottom: 1rem;
+}
+
+.piejaja {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
