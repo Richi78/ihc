@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    margin-bottom: 80px !important; 
+}
+
+
+.titulo-itinerario{
+    text-align: center;
+}
+.titulo-itinerario h1{
+    font-size: 2rem;
+    margin: 30px 0 40px 0;
+    padding-bottom: 4px;
+}
+
+.subrayado {
+      position: relative;
+      display: inline-block;
+    }
+    .subrayado::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: black;
+    }
+
+.text-limit{
+    width: 480px;
+}
+
+.actividad-box{
+    display: flex;
+    gap: 60px;
+    margin-bottom: 4rem;
+}
+
+.actividad-card{
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/7a/a7/56/coca-falls.jpg?w=1200&h=-1&s=1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 480px;
+  height: 270px;
+}
+
+.actividad-tarata-uno{
+  background-image: url('https://lh4.googleusercontent.com/proxy/N6W-D8Pd1juBPFTamEJCQGtFgs-dqACmHLEkp7pQ3eI2uqpiWLEsTb7SfNfo6p4KfuzczwOdTX_bEVR2cP7NAvlVeeJnpeShNtdCnxVjV5FLcEFWT61sferQU1lFf8DOtAiw');
+}
+
+.actividad-tarata-dos{
+  background-image: url('https://www.opinion.com.bo/asset/thumbnail,992,558,center,center/media/opinion/images/2012/07/28/2012V2966.jpg');
+}
+
+.actividad-tarata-tres{
+  background-image: url('https://i0.wp.com/www.iglesiacbba.org/wp-content/uploads/2023/03/tarata.jpg?fit=800%2C445&ssl=1');
+}
+
+.actividad-villa-tunari-uno{
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/7a/a7/56/coca-falls.jpg?w=1200&h=-1&s=1');
+}
+
+.actividad-villa-tunari-dos{
+    background-image: url("https://www.boliviaentusmanos.com/turismo/imagenes/yuraventura-parque-extremo-2.jpg");
+}
+
+.actividad-villa-tunari-tres{
+    background-image: url("https://www.la-razon.com/wp-content/uploads/2023/02/01/20/24ad1f20-fe89-4c0a-a65f-4b36a0af5c6a-1024x768.jpg");
+}
+
+.actividad-villa-tunari-cuatro{
+    background-image: url("https://www.boliviaentusmanos.com/turismo/imagenes/parque-carrasco-1.jpg");
+}
+
+.actividad-pairumani-uno{
+    background-image: url("https://img.over-blog-kiwi.com/2/89/47/81/20180727/ob_51710b_img-20170202-152755848.jpg");
+}
+
+.actividad-pairumani-dos{
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ea/8e/7d/pairumani.jpg");
+}
+
+.actividad-pairumani-tres{
+    background-image: url("https://www.lostiempos.com/sites/default/files/styles/noticia_detalle/public/media_imagen/2023/7/14/img-20230713-wa0277.jpg?itok=Jb0NYcbq");
+}
+
+.actividad-pairumani-cuatro{
+    background-image: url("https://www.guatemala.com/fotos/201702/fogata1-885x500.jpg");
+}
+
+.actividad-incallajta-uno{
+    background-image: url("https://wwwlaregionbo3b375.zapwp.com/q:intelligent/r:0/wp:1/w:1/u:https://www.laregion.bo/wp-content/uploads/2023/06/PORTADA-POCONA-EN-BAJA-1.jpg");
+}
+
+.actividad-incallajta-dos{
+    background-image: url("https://www.lostiempos.com/sites/default/files/styles/noticia_detalle/public/media_imagen/2017/11/15/12_13_me_1_jamessss.jpg?itok=BpslXpki");
+}
+
+.actividad-corani-uno{
+    background-image: url("https://www.opinion.com.bo/asset/thumbnail,992,558,center,center/media/opinion/images/2022/03/27/2022032716365820288.jpg");
+}
+
+.actividad-corani-dos{
+    background-image: url("https://www.opinion.com.bo/asset/thumbnail,992,558,center,center/media/opinion/images/2022/04/09/2022040921490348262.jpg");
+}

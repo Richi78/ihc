@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Destinos</a></li>
-                <li><a href="#">Acerca de nosotros</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <li><a href="#">Contáctenos</a></li>
-                <li><button class="cerrar-sesion">Cerrar Sesión</button></li>
-            </ul>
-        </nav>
-    </header>
 
+<body>
     <main>
         <div class="search-container">
             <input type="text" placeholder="Buscar destino">
@@ -31,78 +17,94 @@
         </div>
 
         <section class="destinos">
-            <h1>Elige tu Destino de viaje</h1>
+            <p>Elige tu Destino de viaje</p>
             <h2>Selecciona el Mejor Paquete para tu Viaje</h2>
 
             <div class="paquetes">
                 <div class="paquete">
-                    <img src="corani.jpg" alt="Corani">
+                    <div class="corani destinos-foto">
+                        <div class="precio">100 Bs</div>
+                    </div>
                     <div class="info">
                         <h3>Corani</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="precio">100 Bs</div>
-                        <button class="mas-info">Más información</button>
+                        <p>Un lugar bastante tranquilo y con una hermosa vista, hay una variedad de cabañas que puedes
+                            alquilar por una ...</p>
+
+                        <button class="mas-info mas-info-corani">Más información</button>
                     </div>
                 </div>
 
                 <div class="paquete">
-                    <img src="incallajta.jpg" alt="Incallajta">
+                    <div class="incallajta destinos-foto">
+                        <div class="precio">200 Bs</div>
+                    </div>
                     <div class="info">
                         <h3>Incallajta</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="precio">200 Bs</div>
-                        <button class="mas-info">Más información</button>
+                        <p>Un viaje en el tiempo, recorriendo una ciudadela inca, con construcciones, muros y otros
+                            rastros de las ruinas...</p>
+
+                        <button class="mas-info mas-info-incallajta">Más información</button>
                     </div>
                 </div>
 
                 <div class="paquete">
-                    <img src="pairumani.jpg" alt="Pairumani">
+                    <div class="pairumani destinos-foto">
+                        <div class="precio">150 Bs</div>
+                    </div>
                     <div class="info">
                         <h3>Pairumani</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="precio">150 Bs</div>
-                        <button class="mas-info">Más información</button>
+                        <p>Un destino eco turístico de Cochabamba muy importante.
+                            En el Parque encuentras diferentes espacios, en ...</p>
+
+                        <button class="mas-info mas-info-pairumani">Más información</button>
                     </div>
                 </div>
 
                 <div class="paquete">
-                    <img src="tarata.jpg" alt="Tarata">
+                    <div class="tarata destinos-foto">
+                        <div class="precio">150 Bs</div>
+                    </div>
                     <div class="info">
                         <h3>Tarata</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="precio">150 Bs</div>
-                        <button class="mas-info">Más información</button>
+                        <p>El bello pueblo de Tarata se encuentra a solo unos 30km de Cochabamba. En el pueblo podrás
+                            disfrutar de su plaza...
+                        </p>
+
+                        <button class="mas-info mas-info-tarata">Más información</button>
                     </div>
                 </div>
 
                 <div class="paquete">
-                    <img src="villa_tunari.jpg" alt="Villa Tunari">
+                    <div class="villa-tunari destinos-foto">
+                        <div class="precio">175 Bs</div>
+                    </div>
                     <div class="info">
                         <h3>Villa Tunari</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="precio">175 Bs</div>
-                        <button class="mas-info">Más información</button>
+                        <p>El pueblo se encuentra en una región de gran belleza natural, en la confluencia de los ríos
+                            Espíritu Santo y San Mateo...</p>
+                        <button class="mas-info mas-info-villa-tunari">Más información</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="contacto">
-            <p>Contáctate con nosotros</p>
-            <p>Teléfono: +592 738 123 456</p>
-            <p>Email: info@cochaventura.com</p>
-            <p>Dirección: Jordán, Ayacucho</p>
-        </div>
-        <div class="copy">
-            <p>CochAventura &copy; 2024. Todos los derechos reservados</p>
-        </div>
-        <div class="social">
-            <img src="facebook.png" alt="Facebook">
-            <img src="instagram.png" alt="Instagram">
-            <img src="twitter.png" alt="Twitter">
-        </div>
-    </footer>
+    <script>
+        document.querySelector('.mas-info-tarata').addEventListener('click', function () {
+            window.location.href = 'actividades-tarata.html';
+        });
+        document.querySelector('.mas-info-corani').addEventListener('click', function () {
+            window.location.href = 'actividades-corani.html';
+        });
+        document.querySelector('.mas-info-pairumani').addEventListener('click', function () {
+            window.location.href = 'actividades-pairumani.html';
+        });
+        document.querySelector('.mas-info-incallajta').addEventListener('click', function () {
+            window.location.href = 'actividades-incallajta.html';
+        });
+        document.querySelector('.mas-info-villa-tunari').addEventListener('click', function () {
+            window.location.href = 'actividades-villa-tunari.html';
+        });
+    </script>
 </body>
+
 </html>
