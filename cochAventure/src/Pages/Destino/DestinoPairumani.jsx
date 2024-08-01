@@ -40,13 +40,10 @@ const DestinoPairumani = () => {
         }
       ];
       const tarjetasItems = [
-        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
-        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
+        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar: 'actividadpairumani' },
+        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar: 'actividadpairumani' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar: 'actividadpairumani' },
       ];
-      const handleCardClick = (title) => {
-        console.log(`Has hecho clic en: ${title}`);
-      };
       return (
         <div className='page'>
         <div className="destino-container">
@@ -60,7 +57,7 @@ const DestinoPairumani = () => {
              vertientes que descienden del Tunari, puedes hacer senderismo. "
              
             favo="Añadir a favoritos"
-            imageUrl="../../assets/pairumani1.jpg"
+            imageUrl='https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ea/8e/7d/pairumani.jpg'
             imageAlt="dxda"
           />
     
@@ -71,9 +68,10 @@ const DestinoPairumani = () => {
             {tarjetasItems.map((item, index) => (
               <Tarjeta
                 key={index}
-                icon={item.icon}
+                image={item.image}
                 title={item.title}
                 description={item.description}
+                lugar={item.lugar}
               />
             ))}
              </div>

@@ -40,13 +40,10 @@ const DestinoIncallajta = () => {
         }
       ];
       const tarjetasItems = [
-        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
-        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
+        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadincallajta' },
+        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadincallajta' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'actividadincallajta' },
       ];
-      const handleCardClick = (title) => {
-        console.log(`Has hecho clic en: ${title}`);
-      };
       return (
         <div className='page'>
         <div className="destino-container">
@@ -60,7 +57,7 @@ const DestinoIncallajta = () => {
             influencia y la organización del imperio en la región oriental."
              
             favo="Añadir a favoritos"
-            imageUrl="../../assets/pairumani1.jpg"
+            imageUrl='https://i0.wp.com/www.amaru-bolivia.com/wp-content/uploads/2014/03/Incallajta-1-1%C3%A8re.jpg?fit=800%2C572&ssl=1'
             imageAlt="dxda"
           />
     
@@ -71,9 +68,10 @@ const DestinoIncallajta = () => {
             {tarjetasItems.map((item, index) => (
               <Tarjeta
                 key={index}
-                icon={item.icon}
+                image={item.image}
                 title={item.title}
                 description={item.description}
+                lugar={item.lugar}
               />
             ))}
              </div>

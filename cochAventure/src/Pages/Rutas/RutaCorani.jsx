@@ -6,7 +6,7 @@ const RutaCorani = () => {
         <div className="page">
           <div className="rute-container">
             <div className="target-title">
-              <h1>Destino de viaje</h1>
+              <h1>Corani</h1>
             </div>
             <div className="target-routes">
               <div className="target-left">

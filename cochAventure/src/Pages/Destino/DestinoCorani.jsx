@@ -39,13 +39,10 @@ const DestinoCorani = () => {
         }
       ];
       const tarjetasItems = [
-        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
-        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
+        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadcorani' },
+        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'corani' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'rutacorani' },
       ];
-      const handleCardClick = () => {
-        console.log(`Has hecho clic en: ${title}`);
-      };
       return (
         <div className='page'>
         <div className="destino-container">
@@ -59,7 +56,8 @@ const DestinoCorani = () => {
             auténtica de la cultura local en un entorno tranquilo y escénico. "
              
             favo="Añadir a favoritos"
-            imageUrl="../../assets/pairumani1.jpg"
+            // imageUrl="../../assets/pairumani1.jpg"
+            imageUrl={'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/1d/7c/87/corani-lake.jpg?w=1200&h=-1&s=1'}
             imageAlt="dxda"
           />
     
@@ -70,9 +68,10 @@ const DestinoCorani = () => {
             {tarjetasItems.map((item, index) => (
               <Tarjeta
                 key={index}
-                icon={item.icon}
+                image={item.image}
                 title={item.title}
                 description={item.description}
+                lugar={item.lugar}
               />
             ))}
              </div>

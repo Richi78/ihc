@@ -41,23 +41,23 @@ const DestinoVillaTunari = () => {
       title: "Itinerario",
       description:
         "En esta sección verá un itinerario completo del viaje con sus actividades respectivas.",
+        lugar:'actividadvillatunari'
     },
     {
       image: informacionImg,
       title: "Informacion",
       description:
         "Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.",
+        lugar:'actividadvillatunari'
     },
     {
       image: rutasImg,
       title: "Rutas",
       description:
         "Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.",
+        lugar:'actividadvillatunari'
     },
   ];
-  const handleCardClick = (title) => {
-    console.log(`Has hecho clic en: ${title}`);
-  };
   return (
     <div className="page">
       <div className="destino-container">
@@ -71,7 +71,7 @@ const DestinoVillaTunari = () => {
             cristalinos y una rica flora y fauna, atrae a turistas en busca de experiencias al aire 
             libre y un contacto cercano con la naturaleza. "
           favo="Añadir a favoritos"
-          imageUrl="../../assets/pairumani1.jpg"
+          imageUrl='https://scontent.fcbb1-2.fna.fbcdn.net/v/t1.6435-9/32089534_2056266121312879_3934845545339682816_n.jpg?stp=dst-jpg_p526x395&_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=D9gJRWnnM4UQ7kNvgFyRFdN&_nc_ht=scontent.fcbb1-2.fna&gid=AJ6SZKjLl9VR85ywJpTAUHa&oh=00_AYDtyEl5GaIfgSGzbhhvvgwGL3tpBaaMsgU9WC-OXUNstQ&oe=66D1CB1E'
           imageAlt="dxda"
         />
 
@@ -81,9 +81,10 @@ const DestinoVillaTunari = () => {
           {tarjetasItems.map((item, index) => (
             <Tarjeta
               key={index}
-              icon={item.icon}
+              image={item.image}
               title={item.title}
               description={item.description}
+              lugar={item.lugar}
             />
           ))}
         </div>

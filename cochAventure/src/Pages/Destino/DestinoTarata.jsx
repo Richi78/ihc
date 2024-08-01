@@ -39,13 +39,10 @@ const DestinoTarata = () => {
         }
       ];
       const tarjetasItems = [
-        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
-        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
+        { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadtarata' },
+        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadtarata' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'actividadtarata' },
       ];
-      const handleCardClick = (title) => {
-        console.log(`Has hecho clic en: ${title}`);
-      };
       return (
         <div className='page'>
         <div className="destino-container">
@@ -60,7 +57,7 @@ const DestinoTarata = () => {
              tradicional boliviana."
              
             favo="Añadir a favoritos"
-            imageUrl="../../assets/pairumani1.jpg"
+            imageUrl='https://web.senado.gob.bo/sites/default/files/styles/img-standard__800x600_/public/800px-Templo_y_convento_de_San_Jos%C3%A9_de_Tarata_Fachada.jpg?itok=9EG-0Nkh'
             imageAlt="dxda"
           />
     
@@ -71,9 +68,10 @@ const DestinoTarata = () => {
             {tarjetasItems.map((item, index) => (
               <Tarjeta
                 key={index}
-                icon={item.icon}
+                image={item.image}
                 title={item.title}
                 description={item.description}
+                lugar={item.lugar}
               />
             ))}
              </div>
