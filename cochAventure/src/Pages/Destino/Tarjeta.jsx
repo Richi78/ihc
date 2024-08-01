@@ -1,10 +1,12 @@
 import React from 'react';
 import './Tarjeta.css';
 
-const Tarjeta = ({ icon, title, description }) => {
+const Tarjeta = ({ image, title, description }) => {
   return (
     <div className="tarjeta">
-      <div className="icono">{icon}</div>
+      <div className="imagen">
+        <img src={image} alt={title} />
+      </div>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>

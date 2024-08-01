@@ -10,8 +10,8 @@ html, body {
   min-height: 100vh; 
 }
 .destino-container {
-    flex: 1;
-    /* font-family:  sans-serif; */
+  flex: 1;
+    font-family: Arial, sans-serif;
     padding: 20px;
     box-sizing: border-box;
   }

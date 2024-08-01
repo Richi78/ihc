@@ -3,6 +3,9 @@ import Detalles from "./Detalles";
 import Tarjeta from "./Tarjeta";
 import Informacion from './Informacion';
 import Footer from '../../Components/Footer/Footer';
+import itinerarioImg from '../../assets/itinerario.png';
+import informacionImg from '../../assets/lista.png';
+import rutasImg from '../../assets/la-carretera.png';
 
 
 const Destino = () => {
@@ -26,16 +29,25 @@ const Destino = () => {
     {
       title: 'PRECIO',
       items: [
-        { icon: '', text: '200 Bs x Persona' },
-        
+        {
+          icon: '',
+          text: '200 Bs x Persona',
+          buttons: [
+            { label: 'Comprar Tour' },
+            { label: 'Reservar Tour'}
+          ]
+        }
       ]
     }
   ];
   const tarjetasItems = [
-    { icon: '🌟', title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
-    { icon: '🚀', title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
-    { icon: '📚', title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
+    { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
+    { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
+    { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
   ];
+  const handleCardClick = (title) => {
+    console.log(`Has hecho clic en: ${title}`);
+  };
   return (
     <div className='page'>
     <div className="destino-container">
@@ -47,8 +59,9 @@ const Destino = () => {
          unos 16 kilómetros del centro de la ciudad. 
          Es un espacio natural, lleno de árboles y rodeado de 
          vertientes que descienden del Tunari, puedes hacer senderismo. "
-
-        imageUrl="/img/pairumani1.jpg"
+         
+        favo="Añadir a favoritos"
+        imageUrl="../../assets/pairumani1.jpg"
         imageAlt="dxda"
       />
 

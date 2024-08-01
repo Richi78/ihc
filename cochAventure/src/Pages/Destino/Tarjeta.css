@@ -5,10 +5,38 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
-  background-color: #D9D9D9; 
+  background-color: #d9d9d9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-.icono {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.tarjeta:hover {
+  transform: translateY(-10px);
+}
+.tarjeta:active {
+  transform: translateY(-2px); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.imagen {
+  margin-bottom: 15px;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Tamaño máximo de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666;
 }

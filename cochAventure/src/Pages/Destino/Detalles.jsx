@@ -14,6 +14,7 @@ const Detalles = ({ items }) => {
                 key={descIndex}
                 icon={descItem.icon}
                 text={descItem.text}
+                buttons={descItem.buttons}
               />
             ))}
           </div>
