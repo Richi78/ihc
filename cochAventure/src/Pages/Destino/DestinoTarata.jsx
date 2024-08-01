@@ -5,6 +5,7 @@ import Informacion from './Informacion';
 import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
+import './Destino.jsx'
 
 const DestinoTarata = () => {
     const detallesItems = [
