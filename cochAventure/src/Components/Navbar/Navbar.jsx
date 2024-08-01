@@ -1,5 +1,6 @@
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom'
+import logo from "../../assets/logoCocha.png"
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -22,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className='navBar'>
       <div className="logo">
-            <img src="logo.png" alt="Logo"/>
+            <img src={logo} alt="Logo" width={100} height={60}/>
       </div>
       <div className='nav-options'>
             <label className='para-hover' onClick={handleInicio}>Inicio</label>

@@ -11,6 +11,8 @@ const Home = () => {
         "Un lugar bastante tranquilo y con una hermosa vista, hay una variedad de cabañas que puedes alquilar por una ...",
       action: "handleCorani",
       precio: "100 Bs",
+      imagen:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/1d/7c/87/corani-lake.jpg?w=1200&h=-1&s=1",
     },
     {
       title: "Incallajta",
@@ -18,6 +20,8 @@ const Home = () => {
         "Un viaje en el tiempo, recorriendo una ciudadela inca, con construcciones, muros y otros rastros de las ruinas...",
       action: "handleIncallajta",
       precio: "200 Bs",
+      imagen:
+        "https://i0.wp.com/www.amaru-bolivia.com/wp-content/uploads/2014/03/Incallajta-1-1%C3%A8re.jpg?fit=800%2C572&ssl=1",
     },
     {
       title: "Pairumani",
@@ -25,6 +29,7 @@ const Home = () => {
         "Un destino eco turístico de Cochabamba muy importante. En el Parque encuentras diferentes espacios, en ...",
       action: "handlePairumani",
       precio: "150 Bs",
+      imagen: "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ea/8e/7d/pairumani.jpg"
     },
     {
       title: "Tarata",
@@ -32,6 +37,7 @@ const Home = () => {
         "El bello pueblo de Tarata se encuentra a solo unos 30km de Cochabamba. En el pueblo podrás disfrutar de su plaza...",
       action: "handleTarata",
       precio: "150 Bs",
+      imagen: "https://web.senado.gob.bo/sites/default/files/styles/img-standard__800x600_/public/800px-Templo_y_convento_de_San_Jos%C3%A9_de_Tarata_Fachada.jpg?itok=9EG-0Nkh"
     },
     {
       title: "VillaTunari",
@@ -39,6 +45,7 @@ const Home = () => {
         "El pueblo se encuentra en una región de gran belleza natural, en la confluencia de los ríos Espíritu Santo y San Mateo...",
       action: "handleVillaTunari",
       precio: "175 Bs",
+      imagen: "https://scontent.fcbb1-2.fna.fbcdn.net/v/t1.6435-9/32089534_2056266121312879_3934845545339682816_n.jpg?stp=dst-jpg_p526x395&_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=D9gJRWnnM4UQ7kNvgFyRFdN&_nc_ht=scontent.fcbb1-2.fna&gid=AJ6SZKjLl9VR85ywJpTAUHa&oh=00_AYDtyEl5GaIfgSGzbhhvvgwGL3tpBaaMsgU9WC-OXUNstQ&oe=66D1CB1E"
     },
   ];
   const lugares = [
@@ -97,6 +104,7 @@ const Home = () => {
                   description={item.description}
                   action={item.action}
                   precio={item.precio}
+                  imagen={item.imagen}
                 />
               ))
             ) : filt.length > 0 ? (
@@ -107,6 +115,7 @@ const Home = () => {
                   description={item.description}
                   action={item.action}
                   precio={item.precio}
+                  imagen={item.imagen}
                 />
               ))
             ) : (

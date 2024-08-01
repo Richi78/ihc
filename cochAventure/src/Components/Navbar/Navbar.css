@@ -3,13 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #304F47;
+    background-color: var(--white);
     color: black;
     min-height: 3rem;
     z-index: 5;
     top: 0;
     left: 0;
     width: 100vw;
+    border-bottom: 2px solid black;
 }
 
 .navBar h2 {
@@ -17,13 +18,10 @@
 }
 
 .logo {
-    width: 50%;
+    
+    /* background-color: red; */
     align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
+    padding-left: 1rem;
 }
 
 .nav-options {

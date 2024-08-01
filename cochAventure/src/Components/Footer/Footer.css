@@ -7,7 +7,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background-color: #D9D9D9;
+    background-color: var(--segundo);
 }
 
 .up-section .left-section {
@@ -24,8 +24,9 @@
 }
 
 .down-section {
-    background-color: #949495;
+    background-color: var(--quinto);
     display: flex;
     justify-content: center;
     padding: 0.5rem 0;
+    color: antiquewhite;
 }
