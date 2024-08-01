@@ -22,7 +22,7 @@ const Navbar = () => {
   }
   return (
     <nav className='navBar'>
-      <div className="logo">
+      <div className="logo" onClick={handleInicio} style={{cursor: "pointer"}}>
             <img src={logo} alt="Logo" width={100} height={60}/>
       </div>
       <div className='nav-options'>

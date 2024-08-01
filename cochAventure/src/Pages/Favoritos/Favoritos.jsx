@@ -1,53 +1,38 @@
+import CardHome from "../../Components/CardHome/CardHome";
 import Footer from "../../Components/Footer/Footer";
-import "./Favoritos.css";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const handleCorani = () => {
-    navigate("/corani");
-  };
-  const handleIncallajta = () => {
-    navigate("/incallajta");
-  };
-  const handlePairumani = () => {
-    navigate("/pairumani");
-  };
-  const handleTarata = () => {
-    navigate("/tarata");
-  };
-  const handleVillaTunari = () => {
-    navigate("/villatunari");
-  };
+  const destinos = [
+    {
+      title: "Pairumani",
+      description:
+        "Un destino eco turístico de Cochabamba muy importante. En el Parque encuentras diferentes espacios, en ...",
+      action: "handlePairumani",
+      precio: "150 Bs",
+      imagen:
+        "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ea/8e/7d/pairumani.jpg",
+    },
+  ];
 
   return (
     <div className="page">
       <div className="maincito">
-      
         <section className="destinos">
-        <h2>Mis favoritos</h2>
+          <div>
+            <h2>Vuelve a ver tus lugares favoritos</h2>
+          </div>
+
           <div className="paquetes">
-            <div className="paquete">
-              <div className="pairumani destinos-foto" onClick={handlePairumani}>
-                <div className="precio">150 Bs</div>
-              </div>
-              <div className="info">
-                <h3>Pairumani</h3>
-                <p>
-                  Un destino eco turístico de Cochabamba muy importante. En el
-                  Parque encuentras diferentes espacios, en ...
-                </p>
-
-                <button
-                  className="mas-info mas-info-pairumani"
-                  onClick={handlePairumani}
-                >
-                  Más información
-                </button>
-              </div>
-            </div>
-
-            
+            {destinos.map((item) => (
+              <CardHome
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                action={item.action}
+                precio={item.precio}
+                imagen={item.imagen}
+              />
+            ))}
           </div>
         </section>
       </div>
