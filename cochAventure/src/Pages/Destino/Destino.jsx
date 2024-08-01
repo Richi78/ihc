@@ -27,9 +27,8 @@ const Destino = () => {
     {
       title: 'PRECIO',
       items: [
-        { icon: '💵', text: 'Costo Total' },
-        { icon: '💳', text: 'Opciones de Pago' },
-        { icon: '🔢', text: 'Número de Personas' }
+        { icon: '', text: '200 Bs x Persona' },
+        
       ]
     }
   ];
@@ -50,7 +49,7 @@ const Destino = () => {
          vertientes que descienden del Tunari, puedes hacer senderismo. "
 
         imageUrl="/img/pairumani1.jpg"
-        imageAlt=""
+        imageAlt="dxda"
       />
 
       <Detalles items={detallesItems} />
