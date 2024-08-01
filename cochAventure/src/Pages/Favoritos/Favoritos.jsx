@@ -25,6 +25,7 @@ const Home = () => {
       <div className="maincito">
       
         <section className="destinos">
+        <h2>Mis favoritos</h2>
           <div className="paquetes">
             <div className="paquete">
               <div className="pairumani destinos-foto" onClick={handlePairumani}>
