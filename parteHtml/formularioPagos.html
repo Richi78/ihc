@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagen-form">
+        </div>
+        <div class="form-container">
+            <h2 class="form-title" style="font-size: 1.7rem;">Formulario de Reserva</h2>
+
+            <div class="payment-methods">
+                <h3 class="payment-title">Métodos de pago</h3>
+                <div>
+                    <img src="https://openui.fly.dev/openui/24x24.svg?text=💳" alt="Visa" class="payment-icon" />
+                    <img src="https://openui.fly.dev/openui/24x24.svg?text=💳" alt="MasterCard" class="payment-icon" />
+                    <img src="https://openui.fly.dev/openui/24x24.svg?text=📱" alt="QR Code" class="payment-icon" />
+                    <img src="https://openui.fly.dev/openui/24x24.svg?text=💻" alt="PayPal" class="payment-icon" />
+                </div>
+            </div>
+            <h4 class="data-title">Introduce tus datos</h4>
+            <form>
+                <label class="form-label">Nombre Completo</label>
+                <input type="text" placeholder="Ej. Rodolfo Adrián" class="form-input" />
+                <label class="form-label">Correo electrónico</label>
+                <input type="email" placeholder="Ej. rodolfo.rivera88@gmail.com" class="form-input" />
+                <label class="form-label">Número de la tarjeta</label>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="form-input" />
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">CVV</label>
+                        <input type="text" placeholder="Ej. 123" class="form-input redux-input" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Fecha de vencimiento</label>
+                        <input type="text" placeholder="MM/YYYY" class="form-input redux-input" />
+                    </div>
+                </div>
+                <div class="amount-row">
+                    <span class="amount-label" style="margin-block: auto;">Monto total: </span>
+                    <span class="amount-value precio-tacha precio-form">200 Bs</span>
+                </div>
+                <div class="amount-row">
+                    <span class="amount-label" style="margin-block: auto;">Monto parcial: </span>
+                    <span class="amount-value precio-form">100 Bs</span>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="saveData" class="checkbox" />
+                    <label for="saveData" class="checkbox-label">Guardar datos para futuras compras</label>
+                </div>
+                <div class="button-box">
+                    <button type="submit" class="submit-button">Reservar ahora</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
