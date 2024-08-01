@@ -1,3 +1,5 @@
+import React from 'react'; 
+import { useNavigate } from 'react-router-dom'; 
 import Footer from "../../Components/Footer/Footer";
 import Tarjeta from "./Tarjeta";
 import Detalles from "./Detalles";
@@ -12,6 +14,10 @@ import foodIcon from '../../assets/food.png';
 import timeIcon from '../../assets/time.png';
 import guiaIcon from '../../assets/guia.png';
 const DestinoVillaTunari = () => {
+  const ticketPrice = 175; 
+
+  const navigate = useNavigate();
+
   const detallesItems = [
     {
       title: "INCLUYE",
@@ -34,8 +40,17 @@ const DestinoVillaTunari = () => {
       items: [
         {
           icon: "",
-          text: "200 Bs x Persona",
-          buttons: [{ label: "Comprar Tour" }, { label: "Reservar Tour" }],
+          text: "175 Bs x Persona",
+          buttons: [
+            { label: 'Comprar Tour', 
+            onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+          },
+            {
+              label: 'Reservar Tour',
+              onClick: () => {navigate('/formr', { state: { ticketPrice } });
+              },
+            },
+          ],
         },
       ],
     },

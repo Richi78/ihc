@@ -1,3 +1,5 @@
+import React from 'react'; 
+import { useNavigate } from 'react-router-dom'; 
 import Footer from '../../Components/Footer/Footer';
 import Tarjeta from './Tarjeta';
 import Detalles from './Detalles';
@@ -13,6 +15,9 @@ import timeIcon from '../../assets/time.png';
 import guiaIcon from '../../assets/guia.png';
 
 const DestinoIncallajta = () => {
+    const ticketPrice = 200;
+
+    const navigate = useNavigate();
     const detallesItems = [
         {
           title: 'INCLUYE',
@@ -37,8 +42,14 @@ const DestinoIncallajta = () => {
               icon: '',
               text: '200 Bs x Persona',
               buttons: [
-                { label: 'Comprar Tour' },
-                { label: 'Reservar Tour'}
+                { label: 'Comprar Tour', 
+                onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+              },
+                {
+                  label: 'Reservar Tour',
+                  onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                  },
+                },
               ]
             }
           ]

@@ -2,15 +2,9 @@ import "./Descripcion.css";
 import { useNavigate } from "react-router-dom";
 
 const Descripcion = ({ icon, text, buttons }) => {
-  const navigate = useNavigate();
 
-  const handleComprarClick = () => {
-    navigate('/formp'); 
-  };
 
-  const handleReservarClick = () => {
-    navigate('/formr'); 
-  };
+ 
 
   return (
     <div className="descripcion">
@@ -22,7 +16,7 @@ const Descripcion = ({ icon, text, buttons }) => {
             {buttons.map((button, index) => (
               <button
                 key={index}
-                onClick={button.label === 'Comprar Tour' ? handleComprarClick : handleReservarClick}
+                onClick={button.onClick}
                 className="boton-personalizado"
               >
                 {button.label}

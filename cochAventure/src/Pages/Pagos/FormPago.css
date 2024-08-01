@@ -72,18 +72,22 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 .payment-title {
     font-size: 1.125rem;
     font-weight: bold;
 }
-
 .payment-icon {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background-color: white;
     padding: 10px 25px;
+    width: 30px; 
+    height: auto; 
+    margin: 0 10px; 
 }
 
 .payment-icon:hover{
@@ -180,4 +184,83 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+}
+
+.ticket-count-row {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.ticket-label {
+    margin-right: 10px;
+}
+
+.ticket-controls {
+    display: flex;
+    align-items: center;
+}
+
+.control-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ticket-count {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.modal {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal h2 {
+    margin-bottom: 15px; /* Aumenta el espacio debajo del título */
+}
+
+.modal p {
+    margin-bottom: 20px; /* Aumenta el espacio debajo del mensaje */
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones al lado derecho */
+    gap: 10px; /* Añade espacio entre los botones */
+}
+
+.modal-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Ajusta el tamaño del padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+}
+
+.modal-button:hover {
+    background: #0056b3;
 }

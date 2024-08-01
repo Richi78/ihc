@@ -1,20 +1,55 @@
-import React from 'react'; 
-import { useNavigate } from 'react-router-dom'; 
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
+import Modal from 'react-modal';
 import './FormPago.css';
 
-const FormPago = () => {
-  const navigate = useNavigate(); 
+
+import visa from "../../assets/visa.png";
+import qr from "../../assets/qr.png";
+import master from "../../assets/master.png";
+import paypal from "../../assets/paypal.png";
+
+// Establece el elemento raíz para el modal
+Modal.setAppElement('#root');
+
+const FormReserva = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const ticketPrice = location.state?.ticketPrice || 0; 
+
+  const [ticketCount, setTicketCount] = React.useState(1); 
+  const [isModalOpen, setIsModalOpen] = React.useState(false); // Definir estado del modal
+
+  const handleIncrement = () => {
+    setTicketCount(prevCount => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    setTicketCount(prevCount => Math.max(prevCount - 1, 1)); 
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    navigate('/comprobante'); 
+    setIsModalOpen(true); 
   };
+
+  const handleConfirm = () => {
+    setIsModalOpen(false); 
+    navigate('/comprobante');
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false); 
+  };
+
+  const totalAmount = ticketCount * ticketPrice;
+  const partialAmount = totalAmount / 2;
 
   return (
     <div className='page'>
       <div className="container">
-        <div className="imagen-form"></div>
+        <div className="imagen-form"></div> 
         <div className="form-container">
            <h2 className="form-title">Formulario de Reserva</h2>
 
@@ -22,29 +57,29 @@ const FormPago = () => {
             <h3 className="payment-title">Métodos de pago</h3>
             <div>
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💳"
+                src={visa}
                 alt="Visa"
                 className="payment-icon"
               />
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💳"
+                src={master}
                 alt="MasterCard"
                 className="payment-icon"
               />
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=📱"
+                src= {qr}
                 alt="QR Code"
                 className="payment-icon"
               />
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💻"
+                src= {paypal}
                 alt="PayPal"
                 className="payment-icon"
               />
             </div>
           </div>
           <h4 className="data-title">Introduce tus datos</h4>
-          <form onSubmit={handleSubmit}> {/* Agrega onSubmit aquí */}
+          <form onSubmit={handleSubmit}>
             <label className="form-label">Nombre Completo</label>
             <input
               type="text"
@@ -81,14 +116,21 @@ const FormPago = () => {
                 />
               </div>
             </div>
-            
+            <div className="ticket-count-row">
+              <span className="ticket-label">Cantidad</span>
+              <div className="ticket-controls">
+                <button type="button" onClick={handleDecrement} className="control-button">-</button>
+                <span className="ticket-count">{ticketCount}</span>
+                <button type="button" onClick={handleIncrement} className="control-button">+</button>
+              </div>
+            </div>
             <div className="amount-row">
               <span className="amount-label">Monto total: </span>
-              <span className="amount-value precio-tacha precio-form">200 Bs</span>
+              <span className="amount-value precio-tacha precio-form">{totalAmount} Bs</span>
             </div>
             <div className="amount-row">
               <span className="amount-label">Monto parcial: </span>
-              <span className="amount-value precio-form">100 Bs</span>
+              <span className="amount-value precio-form">{partialAmount} Bs</span>
             </div>
             <div className="checkbox-row">
               <input type="checkbox" id="saveData" className="checkbox" />
@@ -104,6 +146,20 @@ const FormPago = () => {
           </form>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleCancel}
+        contentLabel="Confirmación de Pago"
+        className="modal"
+        overlayClassName="modal-overlay"
+      >
+        <h2>Confirmación de Pago</h2>
+        <p>¿Estás seguro de realizar este pago?</p>
+        <div className="modal-buttons">
+          <button onClick={handleConfirm} className="modal-button">Aceptar</button>
+          <button onClick={handleCancel} className="modal-button">Cancelar</button>
+        </div>
+      </Modal>
       <div className="piejaja">
         <Footer />
       </div>
@@ -111,4 +167,4 @@ const FormPago = () => {
   );
 };
 
-export default FormPago;
+export default FormReserva;
