@@ -11,7 +11,7 @@ html, body {
 }
 .destino-container {
   flex: 1;
-    font-family: Arial, sans-serif;
+    
     padding: 20px;
     box-sizing: border-box;
   }

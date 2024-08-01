@@ -9,6 +9,7 @@ const Informacion = ({ title, description, favo, imageUrl, imageAlt }) => {
     <div className="segmento-uno">
       <div className="texto-izquierda">
         <h1>{title}</h1>
+        <br/>
         <p>{description}</p>
         <div className="favo-container">
           <img src={favoIcon} alt="Ícono de Favorito" className="favo-icon" />
