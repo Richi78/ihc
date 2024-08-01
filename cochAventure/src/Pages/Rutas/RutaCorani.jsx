@@ -15,6 +15,8 @@ const RutaCorani = () => {
               </div>
               <div className="target-right">
                 <h1>Ruta establecida</h1>
+                <br />
+                <h2>Primera parada</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industrys standard dummy text

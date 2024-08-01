@@ -2,7 +2,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import './App.css'
 import Navbar from "./Components/Navbar/Navbar"
 
-import Destino from "./Pages/Destino/Destino"
 import Home from "./Pages/Home"
 import ActividadCorani from "./Pages/Actividades/ActividadCorani"
 import ActividadIncallajta from "./Pages/Actividades/ActividadIncallajta"

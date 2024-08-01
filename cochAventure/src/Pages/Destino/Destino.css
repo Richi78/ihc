@@ -59,6 +59,7 @@
   .segmento-tres {
     display: flex;
     justify-content: space-between;
+    margin: 3rem 0rem;
   }
   
   .tarjeta {
