@@ -1,14 +1,14 @@
-html, body {
+/* html, body {
   height: 100%;
   margin: 0;
   overflow-x: hidden; 
-}
+} */
 
-#root {
+/* #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh; 
-}
+} */
 .destino-container {
   flex: 1;
     
