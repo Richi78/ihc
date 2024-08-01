@@ -32,7 +32,12 @@
   }
   
   .botones button:hover {
-    background-color: aquamarine;
+    background-color: green;
     transition: 0.6s;
+  }
+  .descripcion-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
   }
   
