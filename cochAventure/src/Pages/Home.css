@@ -190,3 +190,13 @@ footer {
         margin-bottom: 10px;
     }
 }
+
+.f-resultados {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: #999;
+}
