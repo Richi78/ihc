@@ -79,8 +79,14 @@ const Home = () => {
         </div>
 
         <section className="destinos">
-          <p>Elige tu Destino de viaje</p>
-          <h2>Selecciona el Mejor Paquete para tu Viaje</h2>
+          <div
+            style={{
+              display: `${filtrando && filt.length === 0 ? "none" : "block"}`,
+            }}
+          >
+            <p>Elige tu Destino de viaje</p>
+            <h2>Selecciona el Mejor Paquete para tu Viaje</h2>
+          </div>
 
           <div className="paquetes">
             {filtrando === false ? (
@@ -105,10 +111,10 @@ const Home = () => {
               ))
             ) : (
               <div className="f-resultados">
-                <h2>No existen resultados</h2>
+                <h2>No existen resultados.</h2>
                 <h3>
-                  Revisa si tu busqueda esta bien escrita o intenta con otro
-                  destino turistico
+                  Revisa si tu búsqueda está bien escrita o intenta con otro
+                  destino turístico.
                 </h3>
               </div>
             )}
