@@ -2,6 +2,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import './App.css'
 import Navbar from "./Components/Navbar/Navbar"
 import Ruta from "./Pages/Ruta"
+import Destino from "./Pages/Destino/Destino"
 import Home from "./Pages/Home"
 import ActividadCorani from "./Pages/ActividadCorani"
 import ActividadIncallajta from "./Pages/ActividadIncallajta"
@@ -17,6 +18,8 @@ function App() {
       <Navbar/>
       <Routes>
         {/* aqui las rutas */}
+        <Route path="/ruta" element={<Ruta/>} />
+        <Route path="/destino" element={<Destino/>} />
         <Route path="/ruta" element={<Ruta />} />
         <Route path="/home" element={<Home />} />
         <Route path="/corani" element={<ActividadCorani />} />

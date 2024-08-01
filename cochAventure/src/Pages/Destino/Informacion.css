@@ -1,0 +1,32 @@
+.segmento-uno {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 50vh; /* Tamaño de media pantalla */
+    align-items: center; /* Centrar verticalmente el contenido */
+  }
+  
+  .texto-izquierda {
+    flex: 1;
+  }
+  
+  .imagen-derecha {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-derecha img {
+    max-width: 100%;
+    height: auto;
+  }
+  h1{
+    font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+  }
+  p{
+    font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  }
+  
