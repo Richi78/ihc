@@ -25,12 +25,11 @@
     justify-content: center;
     align-items: center;
     width: 50vw;
+    min-width: calc(100vh - 13rem);
     padding: 2rem 0rem;
 }
 
 .target-left img {
-    
-    
     
     width: 80%;
     /* padding: 2rem 2rem; */
@@ -51,3 +50,4 @@
 .piejaja {
     margin-top: auto;
 }
+

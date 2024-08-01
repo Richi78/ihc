@@ -1,5 +1,6 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
+import toPairumani from '../../assets/toPairumani.png'
 
 const RutaPairumani = () => {
     return (
@@ -11,7 +12,7 @@ const RutaPairumani = () => {
             <div className="target-routes">
               <div className="target-left">
                 <img 
-                    src="https://www.shutterstock.com/shutterstock/photos/1403218805/display_1500/stock-vector-city-map-navigation-banner-point-marker-background-simple-vector-drawing-city-plan-gps-navigation-1403218805.jpg" alt="" />
+                    src={toPairumani} alt="" />
               </div>
               <div className="target-right">
                 <h1>Ruta establecida</h1>
