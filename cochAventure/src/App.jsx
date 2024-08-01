@@ -27,6 +27,7 @@ function App() {
         <Route path="/pairumani" element={<ActividadPairumani />} />
         <Route path="/tarata" element={<ActividadTarata />} />
         <Route path="/villatunari" element={<ActividadVillaTunari />} />
+        <Route path="/destino" element={<Destino />} />
       </Routes>
     </BrowserRouter>
   )

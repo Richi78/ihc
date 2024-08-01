@@ -1,9 +1,8 @@
-import React from 'react';
 import './Destino.css';
-import Footer from "../../Components/Footer/Footer";
 import Detalles from "./Detalles";
 import Tarjeta from "./Tarjeta";
 import Informacion from './Informacion';
+import Footer from '../../Components/Footer/Footer';
 
 
 const Destino = () => {
@@ -39,6 +38,7 @@ const Destino = () => {
     { icon: '📚', title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
   ];
   return (
+    <div className='page'>
     <div className="destino-container">
        <Informacion
         title="Parque Ecoturistico Pairumani"
@@ -68,6 +68,10 @@ const Destino = () => {
          </div>
         
       
+    </div>
+    <div className="piejaja">
+        <Footer />
+      </div>
     </div>
   );
 };
