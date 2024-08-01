@@ -1,15 +1,48 @@
-import React from 'react'; // Asegúrate de importar React si no está importado en tu archivo
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate para la navegación
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
+import Modal from 'react-modal';
 import './FormPago.css';
+import visa from "../../assets/visa.png";
+import qr from "../../assets/qr.png";
+import master from "../../assets/master.png";
+import paypal from "../../assets/paypal.png";
+
+// Establece el elemento raíz para el modal
+Modal.setAppElement('#root');
 
 const FormPago = () => {
-  const navigate = useNavigate(); 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const ticketPrice = location.state?.ticketPrice || 0; 
+
+  const [ticketCount, setTicketCount] = React.useState(1); 
+  const [isModalOpen, setIsModalOpen] = React.useState(false); // Definir estado del modal
+
+  const handleIncrement = () => {
+    setTicketCount(prevCount => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    setTicketCount(prevCount => Math.max(prevCount - 1, 1)); 
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    navigate('/comprobante'); 
+    setIsModalOpen(true); 
   };
+
+  const handleConfirm = () => {
+    setIsModalOpen(false); 
+    navigate('/comprobante');
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false); 
+  };
+
+  const totalAmount = ticketCount * ticketPrice;
+
 
   return (
     <div className='page'>
@@ -24,22 +57,22 @@ const FormPago = () => {
             <h3 className="payment-title">Métodos de pago</h3>
             <div>
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💳"
+                src={visa}
                 alt="Visa"
                 className="payment-icon"
               />
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💳"
+                src={master}
                 alt="MasterCard"
                 className="payment-icon"
               />
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=📱"
+                src= {qr}
                 alt="QR Code"
                 className="payment-icon"
               />
               <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💻"
+                src= {paypal}
                 alt="PayPal"
                 className="payment-icon"
               />
@@ -83,11 +116,17 @@ const FormPago = () => {
                 />
               </div>
             </div>
+            <div className="ticket-count-row">
+              <span className="ticket-label">Cantidad</span>
+              <div className="ticket-controls">
+                <button type="button" onClick={handleDecrement} className="control-button">-</button>
+                <span className="ticket-count">{ticketCount}</span>
+                <button type="button" onClick={handleIncrement} className="control-button">+</button>
+              </div>
+            </div>
             <div className="amount-row">
-              <span className="amount-label">
-                Monto total:{" "}
-              </span>
-              <span className="amount-value precio-form">200 Bs</span>
+              <span className="amount-label">Monto total: </span>
+              <span className="amount-value precio-form">{totalAmount} Bs</span>
             </div>
             <div className="checkbox-row">
               <input type="checkbox" id="saveData" className="checkbox" />
@@ -103,6 +142,20 @@ const FormPago = () => {
           </form>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleCancel}
+        contentLabel="Confirmación de Pago"
+        className="modal"
+        overlayClassName="modal-overlay"
+      >
+        <h2>Confirmación de Pago</h2>
+        <p>¿Estás seguro de realizar este pago?</p>
+        <div className="modal-buttons">
+          <button onClick={handleConfirm} className="modal-button">Aceptar</button>
+          <button onClick={handleCancel} className="modal-button">Cancelar</button>
+        </div>
+      </Modal>
       <div className="piejaja">
         <Footer />
       </div>
