@@ -1,5 +1,5 @@
 import "./Ruta.css";
-import Footer from "../Components/Footer/Footer";
+import Footer from "../../Components/Footer/Footer";
 
 const Ruta = () => {
   return (

@@ -78,7 +78,6 @@ const Destino = () => {
           />
         ))}
          </div>
-        
       
     </div>
     <div className="piejaja">

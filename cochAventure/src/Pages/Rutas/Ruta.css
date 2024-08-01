@@ -20,13 +20,28 @@
 }
 
 .target-left {
-    width: 40vw;
-    padding: 2rem 2rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding: 2rem 0rem;
+}
+
+.target-left img {
+    
+    
+    
+    width: 80%;
+    /* padding: 2rem 2rem; */
 }
 
 .target-right {
-    width: 60vw;
-    padding: 2rem 15rem;
+    width: 50vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 15rem;
+    padding-left: 2rem;
 }
 
 .target-right h1{

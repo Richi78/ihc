@@ -1,4 +1,4 @@
-import Footer from "../Components/Footer/Footer";
+import Footer from "../../Components/Footer/Footer";
 import "./Actividades.css";
 
 const ActividadCorani = () => {
