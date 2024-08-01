@@ -40,7 +40,7 @@ const Home = () => {
       imagen: "https://web.senado.gob.bo/sites/default/files/styles/img-standard__800x600_/public/800px-Templo_y_convento_de_San_Jos%C3%A9_de_Tarata_Fachada.jpg?itok=9EG-0Nkh"
     },
     {
-      title: "VillaTunari",
+      title: "Villa Tunari",
       description:
         "El pueblo se encuentra en una región de gran belleza natural, en la confluencia de los ríos Espíritu Santo y San Mateo...",
       action: "handleVillaTunari",
@@ -67,7 +67,7 @@ const Home = () => {
     const y = lugares.filter((x) =>
       x.toLowerCase().includes(e.target.value.toLowerCase())
     );
-    const jaja = destinos.filter((e) => y.includes(e.title));
+    const jaja = destinos.filter((e) => y.includes(e.title.replace(/\s+/g, '')));
     setFilt([...jaja]);
     setFiltrando(true);
   };
