@@ -1,0 +1,189 @@
+.maincito {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 13rem);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4c0c1b;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: -1px;
+}
+
+.search-icon {
+    font-size: 18px;
+}
+
+.destinos-foto{
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.corani{
+  background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/1d/7c/87/corani-lake.jpg?w=1200&h=-1&s=1');
+  
+}
+
+.incallajta{
+  background-image: url('https://i0.wp.com/www.amaru-bolivia.com/wp-content/uploads/2014/03/Incallajta-1-1%C3%A8re.jpg?fit=800%2C572&ssl=1');
+}
+
+.pairumani{
+  background-image: url('https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ea/8e/7d/pairumani.jpg');
+}
+
+.tarata{
+  background-image: url('https://web.senado.gob.bo/sites/default/files/styles/img-standard__800x600_/public/800px-Templo_y_convento_de_San_Jos%C3%A9_de_Tarata_Fachada.jpg?itok=9EG-0Nkh');
+}
+
+.villa-tunari{
+  background-image: url('https://scontent.fcbb1-2.fna.fbcdn.net/v/t1.6435-9/32089534_2056266121312879_3934845545339682816_n.jpg?stp=dst-jpg_p526x395&_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=D9gJRWnnM4UQ7kNvgFyRFdN&_nc_ht=scontent.fcbb1-2.fna&gid=AJ6SZKjLl9VR85ywJpTAUHa&oh=00_AYDtyEl5GaIfgSGzbhhvvgwGL3tpBaaMsgU9WC-OXUNstQ&oe=66D1CB1E');
+}
+
+.mas-info:hover{
+    background-color: aquamarine;
+    transition: 0.6s;
+}
+
+.destinos h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.destinos h2 {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.paquetes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.paquete {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 23%;
+}
+
+.paquete img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.paquete .info {
+    padding: 15px;
+    text-align: left;
+}
+
+.paquete .info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.paquete .info p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.paquete .precio {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mas-info {
+    background-color: #e8e8e8;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #ccc;
+}
+
+
+
+.icono-contactos-box{
+    width: 25px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.icono-contactos-box:hover{
+    background-color: white;
+}
+
+.precio{
+    background-color: antiquewhite;
+    width: fit-content;
+    padding: 3px 5px;
+}
+
+@media (max-width: 768px) {
+    .paquetes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paquete {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
