@@ -1,52 +1,19 @@
-import React from 'react'; // Asegúrate de importar React si no está importado en tu archivo
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate para la navegación
 import Footer from '../../Components/Footer/Footer';
-import './FormPago.css';
+import './Comprobante.css'
 
 const FormPago = () => {
-  const navigate = useNavigate(); 
-
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
-    navigate('/comprobante'); 
-  };
-
   return (
     <div className='page'>
       <div className="container">
         <div className="imagen-form"></div>
         <div className="form-container">
-          <h2 className="form-title">
-            Formulario de Pago
+           <h2 className="form-title" >  {/*style="font-size: 1.7rem;" */}
+            Comprobante de pago
           </h2>
 
-          <div className="payment-methods">
-            <h3 className="payment-title">Métodos de pago</h3>
-            <div>
-              <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💳"
-                alt="Visa"
-                className="payment-icon"
-              />
-              <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💳"
-                alt="MasterCard"
-                className="payment-icon"
-              />
-              <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=📱"
-                alt="QR Code"
-                className="payment-icon"
-              />
-              <img
-                src="https://openui.fly.dev/openui/24x24.svg?text=💻"
-                alt="PayPal"
-                className="payment-icon"
-              />
-            </div>
-          </div>
+          
           <h4 className="data-title">Introduce tus datos</h4>
-          <form onSubmit={handleSubmit}>
+          <form>
             <label className="form-label">Nombre Completo</label>
             <input
               type="text"
@@ -84,11 +51,12 @@ const FormPago = () => {
               </div>
             </div>
             <div className="amount-row">
-              <span className="amount-label">
+              <span className="amount-label" > {/* style="margin-block: auto;"*/}
                 Monto total:{" "}
               </span>
               <span className="amount-value precio-form">200 Bs</span>
             </div>
+            
             <div className="checkbox-row">
               <input type="checkbox" id="saveData" className="checkbox" />
               <label htmlFor="saveData" className="checkbox-label">

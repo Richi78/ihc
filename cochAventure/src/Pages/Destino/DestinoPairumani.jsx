@@ -32,8 +32,8 @@ const DestinoPairumani = () => {
               icon: '',
               text: '200 Bs x Persona',
               buttons: [
-                { label: 'Comprar Tour' },
-                { label: 'Reservar Tour'}
+                { label: 'Comprar Tour', onClick: () => console.log('Comprar Tour') },
+                { label: 'Reservar Tour', onClick: () => console.log('Reservar Tour') }
               ]
             }
           ]

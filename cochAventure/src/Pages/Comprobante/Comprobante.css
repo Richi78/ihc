@@ -42,7 +42,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 90%;
@@ -81,12 +81,7 @@
 .payment-icon {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    background-color: white;
     padding: 10px 25px;
-}
-
-.payment-icon:hover{
-    background-color: #52AABA;
 }
 
 /* Títulos de datos */
@@ -160,7 +155,7 @@
 /* Estilos del botón de enviar */
 .submit-button {
     padding: 0.75rem 3rem;
-    background-color: #52AABA;
+    background-color: #007bff;
     color: #ffffff;
     border: none;
     border-radius: 4px;

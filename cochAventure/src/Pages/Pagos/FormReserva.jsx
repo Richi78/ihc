@@ -1,5 +1,5 @@
-import React from 'react'; // Asegúrate de importar React si no está importado en tu archivo
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate para la navegación
+import React from 'react'; 
+import { useNavigate } from 'react-router-dom'; 
 import Footer from '../../Components/Footer/Footer';
 import './FormPago.css';
 
@@ -16,9 +16,7 @@ const FormPago = () => {
       <div className="container">
         <div className="imagen-form"></div>
         <div className="form-container">
-          <h2 className="form-title">
-            Formulario de Pago
-          </h2>
+           <h2 className="form-title">Formulario de Reserva</h2>
 
           <div className="payment-methods">
             <h3 className="payment-title">Métodos de pago</h3>
@@ -46,7 +44,7 @@ const FormPago = () => {
             </div>
           </div>
           <h4 className="data-title">Introduce tus datos</h4>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}> {/* Agrega onSubmit aquí */}
             <label className="form-label">Nombre Completo</label>
             <input
               type="text"
@@ -84,10 +82,12 @@ const FormPago = () => {
               </div>
             </div>
             <div className="amount-row">
-              <span className="amount-label">
-                Monto total:{" "}
-              </span>
-              <span className="amount-value precio-form">200 Bs</span>
+              <span className="amount-label">Monto total: </span>
+              <span className="amount-value precio-tacha precio-form">200 Bs</span>
+            </div>
+            <div className="amount-row">
+              <span className="amount-label">Monto parcial: </span>
+              <span className="amount-value precio-form">100 Bs</span>
             </div>
             <div className="checkbox-row">
               <input type="checkbox" id="saveData" className="checkbox" />
@@ -97,7 +97,7 @@ const FormPago = () => {
             </div>
             <div className="button-box">
               <button type="submit" className="submit-button">
-                Comprar ahora
+                Reservar ahora
               </button>
             </div>
           </form>

@@ -16,11 +16,14 @@ import DestinoPairumani from "./Pages/Destino/DestinoPairumani"
 import DestinoTarata from "./Pages/Destino/DestinoTarata"
 import DestinoVillaTunari from "./Pages/Destino/DestinoVillaTunari"
 import FormPago from "./Pages/Pagos/FormPago"
+import FormReserva from "./Pages/Pagos/FormReserva"
 import RutaIncallajta from "./Pages/Rutas/RutaIncallajta"
 import RutaPairumani from "./Pages/Rutas/RutaPairumani"
 import RutaTarata from "./Pages/Rutas/RutaTarata"
 import RutaVillaTunari from "./Pages/Rutas/RutaVillaTunari"
 import Favoritos from "./Pages/Favoritos/Favoritos"
+import Comprobante from './Pages/Comprobante/Comprobante'; 
+
 
 function App() {
 
@@ -48,7 +51,9 @@ function App() {
         <Route path="/rutatarata" element={<RutaTarata />} />
         <Route path="/rutavillatunari" element={<RutaVillaTunari />} />
         <Route path="/formp" element={<FormPago />} />
+        <Route path="/Formr" element={<FormReserva />} />
         <Route path="/favoritos" element={<Favoritos />} />
+        <Route path="/comprobante" element={<Comprobante />} />
       </Routes>
     </BrowserRouter>
   )
