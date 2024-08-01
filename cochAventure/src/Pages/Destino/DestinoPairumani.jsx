@@ -56,7 +56,7 @@ const DestinoPairumani = () => {
              Es un espacio natural, lleno de árboles y rodeado de 
              vertientes que descienden del Tunari, puedes hacer senderismo. "
              
-            favo="Añadir a favoritos"
+            favo="Eliminar de favoritos"
             imageUrl='https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ea/8e/7d/pairumani.jpg'
             imageAlt="dxda"
           />

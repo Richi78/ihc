@@ -20,6 +20,7 @@ import RutaIncallajta from "./Pages/Rutas/RutaIncallajta"
 import RutaPairumani from "./Pages/Rutas/RutaPairumani"
 import RutaTarata from "./Pages/Rutas/RutaTarata"
 import RutaVillaTunari from "./Pages/Rutas/RutaVillaTunari"
+import Favoritos from "./Pages/Favoritos/Favoritos"
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
         <Route path="/rutatarata" element={<RutaTarata />} />
         <Route path="/rutavillatunari" element={<RutaVillaTunari />} />
         <Route path="/formp" element={<FormPago />} />
+        <Route path="/favoritos" element={<Favoritos />} />
       </Routes>
     </BrowserRouter>
   )
