@@ -4,42 +4,94 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f2f2f2;
-    margin-bottom: 80px !important; 
+    margin-bottom: 80px !important;
 }
 
 
-.titulo-itinerario{
+.container {
+    padding: 1.5rem;
+}
+
+
+.titulo-itinerario {
     text-align: center;
 }
-.titulo-itinerario h1{
-    font-size: 2rem;
+
+.titulo {
+    font-size: 2rem; 
+    font-weight: bold;
     margin: 30px 0 40px 0;
     padding-bottom: 4px;
+    position: relative;
+    display: inline-block;
 }
 
-.subrayado {
-      position: relative;
-      display: inline-block;
-    }
-    .subrayado::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 100%;
-      height: 2px;
-      background: black;
-    }
-
-.text-limit{
-    width: 480px;
+.titulo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: black;
 }
 
-.actividad-box{
+
+.grid-container {
     display: flex;
-    gap: 60px;
+    justify-content: center;
     margin-bottom: 4rem;
 }
+
+.actividad-box {
+    display: flex;
+    gap: 60px;
+}
+
+.actividad-info {
+    max-width: 480px;
+}
+
+
+.actividad-titulo {
+    font-size: 1.25rem;
+    font-weight: 600; 
+    margin-top: 0.5rem; 
+}
+
+
+.actividad-descripcion {
+    width: 480px; 
+}
+
+
+.actividad-duracion,
+.actividad-hora {
+    margin-top: 0.5rem; 
+}
+
+.actividad-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 480px;
+    height: 270px;
+}
+
+
+.actividad-corani-uno {
+    background-image: url('https://www.opinion.com.bo/asset/thumbnail,992,558,center,center/media/opinion/images/2022/03/27/2022032716365820288.jpg');
+}
+
+.actividad-corani-dos {
+    background-image: url('https://www.opinion.com.bo/asset/thumbnail,992,558,center,center/media/opinion/images/2022/04/09/2022040921490348262.jpg');
+}
+
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
 
 .actividad-card{
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/7a/a7/56/coca-falls.jpg?w=1200&h=-1&s=1');
