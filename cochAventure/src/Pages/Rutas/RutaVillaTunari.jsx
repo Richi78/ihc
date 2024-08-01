@@ -1,41 +1,53 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
-import toVillaTunari from '../../assets/toVillaTunari.png'
+import toVillaTunari from "../../assets/toVillaTunari.png";
 
 const RutaVillaTunari = () => {
-    return (
-        <div className="page">
-          <div className="rute-container">
-            <div className="target-title">
-              <h1>Villa Tunari</h1>
-            </div>
-            <div className="target-routes">
-              <div className="target-left">
-                <img 
-                    src={toVillaTunari} alt="" />
-              </div>
-              <div className="target-right">
-                <h1>Ruta establecida</h1>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industrys standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley of
-                  type and scrambled it to make a type specimen book. It has
-                  survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. It was
-                  popularised in the 1960s with the release of Letraset sheets
-                  containing Lorem Ipsum passages, and more recently with desktop
-                  publishing software like Aldus PageMaker including versions of
-                  Lorem Ipsum.
-                </p>
-              </div>
-            </div>
+  return (
+    <div className="page">
+      <div className="rute-container">
+        <div className="target-title">
+          <h1>Villa Tunari</h1>
+        </div>
+        <div className="target-routes">
+          <div className="target-left">
+            <img src={toVillaTunari} alt="" />
           </div>
-          <div className="piejaja">
-            <Footer />
+          <div className="target-right">
+            <h1>Ruta establecida</h1>
+            <br />
+            <p>
+              Villa Tunari es un destino ideal para aquellos que buscan una
+              experiencia en la selva tropical y desean explorar la
+              biodiversidad y las maravillas naturales de Bolivia.
+            </p>
+            <br />
+            <h2>Primera parada - Cascada Velo de Novia Chocolatal</h2>
+            <br />
+            <p>
+              Es una subida por sendero, inicia a lado del rio sendero poco
+              marcado hasta llegar a una casucha de madera, se debe continuar
+              por el sendero que lleva al mirador donde se ve la cascada, tener
+              mucho cuidado en ese tramo para bajar.
+            </p>
+            <br />
+            <h2>Segunda parada - Puente Colgante Gral. Barrientos</h2>
+            <br />
+            <p>
+              El Puente Colgante Gral. Barrientos es una estructura emblemática
+              ubicada cerca a Villa Tunari, un vibrante pueblo en el corazón del
+              trópico de Cochabamba, Bolivia. Conecta dos importantes puntos de
+              la región, ofreciendo una experiencia única tanto para los locales
+              como para los visitantes.
+            </p>
           </div>
         </div>
-      );
-}
+      </div>
+      <div className="piejaja">
+        <Footer />
+      </div>
+    </div>
+  );
+};
 
-export default RutaVillaTunari
+export default RutaVillaTunari;

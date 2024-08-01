@@ -16,18 +16,30 @@ const RutaCorani = () => {
           <div className="target-right">
             <h1>Ruta establecida</h1>
             <br />
-            <h2>Primera parada</h2>
+  
+            <p>Sale de la ciudad de Cochabamba tomando la carretera hacia el este, 
+              en dirección a Sacaba. Sigue la carretera principal (Ruta 4) que te 
+              llevará hacia el pueblo de Colomi. Este tramo de la carretera es bien 
+              pavimentado y ofrece vistas panorámicas de las montañas y el paisaje andino.</p>
+            <br />
+            <h2>Primera parada - Laguna San Isidro</h2>
+            <br />
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            Es un bonito lugar, sus aguas son tranquilas 
+            y se pueden encontrar especies como el pejerrey y la carpa. Al ser un lugar turístico, 
+            existe un mirador en forma de barco donde se puede apreciar el espejo de agua. 
+            También existen espacios de camping, cabañas donde se puede pernoctar, restaurantes 
+            con comidas típicas, canchas de futbol, fulbito, basquet, se puede hacer tracking. 
+            El viento en el lugar es considerable.
+            </p>
+            <br />
+            <h2>Segunda parada - Mirador de la Cumbre</h2>
+            <br />
+            <p>
+            Hermosa vista de la comunidad de Waka, se puede ver hasta lo mas lejos de las montañas 
+            aledañas, la vista es increíble, solo escuchas a los camiones americanos bajando con su 
+            freno de motor una melodía de sonido. Recomiendo ir en época de enero - marzo, el 
+            viento es muy fuerte en invierno.
             </p>
           </div>
         </div>
