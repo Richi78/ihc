@@ -1,0 +1,70 @@
+
+.destino-container {
+    flex: 1;
+    /* font-family:  sans-serif; */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .segmento-uno {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .texto-izquierda {
+    width: 40vw;
+    padding: 2rem 4rem;
+    flex: 1;
+  }
+  
+  .imagen-derecha {
+    width: 60vw;
+    padding: 2rem 10rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-derecha img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .segmento-dos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .segmento-dos .item {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .segmento-tres {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tarjeta {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .icono {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .footer {
+    margin-top: auto;
+}
+  
