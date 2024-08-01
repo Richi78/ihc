@@ -6,11 +6,6 @@ import Footer from '../../Components/Footer/Footer';
 import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
-import busIcon from '../../assets/bus.png';
-import dateIcon from '../../assets/date.png';
-import foodIcon from '../../assets/food.png';
-import timeIcon from '../../assets/time.png';
-import guiaIcon from '../../assets/guia.png';
 
 
 const Destino = () => {
@@ -50,9 +45,7 @@ const Destino = () => {
     { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
     { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
   ];
-  const handleCardClick = (title) => {
-    console.log(`Has hecho clic en: ${title}`);
-  };
+
   return (
     <div className='page'>
     <div className="destino-container">

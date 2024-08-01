@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--white);
+    background-color: #febd59;
     color: black;
     min-height: 3rem;
     z-index: 5;
@@ -35,4 +35,8 @@
 
 .para-hover:hover{
     cursor: pointer;
+}
+
+.cerrar-sesion {
+    background-color: #d9d9d9;
 }

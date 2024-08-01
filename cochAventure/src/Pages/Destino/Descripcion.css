@@ -25,14 +25,15 @@
     padding: 10px 20px; /* Tamaño más grande de los botones */
     border: none;
     border-radius: 4px;
-    background-color: black;
-    color: white;
+    background-color: #d9d9d9;
+    
+    color: black;
     cursor: pointer;
     font-size: 1.2rem; /* Tamaño de fuente más grande para los botones */
   }
   
   .botones button:hover {
-    background-color: green;
+    filter: brightness(0.8);
     transition: 0.6s;
   }
   .descripcion-icon {

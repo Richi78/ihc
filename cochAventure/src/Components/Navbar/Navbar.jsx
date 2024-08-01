@@ -31,7 +31,7 @@ const Navbar = () => {
             <label className='para-hover' onClick={handleFavoritos}>Favoritos</label>
             <label className='para-hover' onClick={handleContacto}>Contáctenos</label>
             <label>Acerca de nosotros</label>
-            <button className="btn">Cerrar Sesión</button>
+            <button className="btn cerrar-sesion">Cerrar Sesión</button>
       </div>
     </nav>
   )
