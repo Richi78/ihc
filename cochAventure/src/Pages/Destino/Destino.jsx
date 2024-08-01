@@ -6,6 +6,11 @@ import Footer from '../../Components/Footer/Footer';
 import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
+import busIcon from '../../assets/bus.png';
+import dateIcon from '../../assets/date.png';
+import foodIcon from '../../assets/food.png';
+import timeIcon from '../../assets/time.png';
+import guiaIcon from '../../assets/guia.png';
 
 
 const Destino = () => {
@@ -14,8 +19,8 @@ const Destino = () => {
       title: 'INCLUYE',
       items: [
         { icon: '🛏️', text: 'Transporte ida y vuelta: Bus.' },
-        { icon: '🍽️', text: 'Desayuno, Refrigerio y almuerzo.' },
-        { icon: '🚌', text: 'Guías completas durante el viaje.' }
+        { icon: '🍽️', text: '.' },
+        { icon: '🚌', text: '' }
       ]
     },
     {

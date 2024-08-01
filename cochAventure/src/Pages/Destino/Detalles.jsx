@@ -3,8 +3,6 @@ import Descripcion from './Descripcion';
 import './Detalles.css';
 
 const Detalles = ({ items }) => {
-
-  
   return (
     <div className="segmento-dos">
       {items.map((item, index) => (

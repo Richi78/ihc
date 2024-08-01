@@ -6,22 +6,27 @@ import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
 import './Destino.jsx'
+import busIcon from '../../assets/bus.png';
+import dateIcon from '../../assets/date.png';
+import foodIcon from '../../assets/food.png';
+import timeIcon from '../../assets/time.png';
+import guiaIcon from '../../assets/guia.png';
 
 const DestinoIncallajta = () => {
     const detallesItems = [
         {
           title: 'INCLUYE',
           items: [
-            { icon: '🛏️', text: 'Transporte ida y vuelta: Bus.' },
-            { icon: '🍽️', text: 'Desayuno, Refrigerio y almuerzo.' },
-            { icon: '🚌', text: 'Guías completas durante el viaje.' }
+            { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
+            { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+            { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
           ]
         },
         {
           title: 'DETALLES',
           items: [
-            { icon: '🏞️', text: ' Duración: 1 Dia' },
-            { icon: '📅', text: 'Fecha salida: 06/08/2024 ' },
+            { icon: timeIcon, text: ' Duración: 1 Dia' },
+            { icon: dateIcon, text: 'Fecha salida: 06/08/2024 ' },
             { icon: '', text: ' Fecha llegada: 06/08/2024' }
           ]
         },

@@ -81,6 +81,7 @@ const FormPago = () => {
                 />
               </div>
             </div>
+            
             <div className="amount-row">
               <span className="amount-label">Monto total: </span>
               <span className="amount-value precio-tacha precio-form">200 Bs</span>

@@ -14,7 +14,7 @@ const Descripcion = ({ icon, text, buttons }) => {
 
   return (
     <div className="descripcion">
-      {icon && <span className="icono">{icon}</span>}
+      {icon && <img src={icon} alt="" className="descripcion-icon" />}  
       <div className="texto">
         {text}
         {buttons && (
