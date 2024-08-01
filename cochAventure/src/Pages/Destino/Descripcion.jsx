@@ -1,7 +1,11 @@
-import React from 'react';
-import './Descripcion.css';
+import "./Descripcion.css";
+import { useNavigate } from "react-router-dom";
 
 const Descripcion = ({ icon, text, buttons }) => {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate('/formp')
+  }
   return (
     <div className="descripcion">
       {icon && <span className="icono">{icon}</span>}
@@ -10,7 +14,7 @@ const Descripcion = ({ icon, text, buttons }) => {
         {buttons && (
           <div className="botones">
             {buttons.map((button, index) => (
-              <button key={index} onClick={button.onClick}>
+              <button key={index} onClick={handleClick}> {/*button.onClick */}
                 {button.label}
               </button>
             ))}

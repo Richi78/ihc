@@ -1,7 +1,25 @@
 import Footer from "../Components/Footer/Footer";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleCorani = () => {
+    navigate("/corani");
+  };
+  const handleIncallajta = () => {
+    navigate("/incallajta");
+  };
+  const handlePairumani = () => {
+    navigate("/pairumani");
+  };
+  const handleTarata = () => {
+    navigate("/tarata");
+  };
+  const handleVillaTunari = () => {
+    navigate("/villatunari");
+  };
+
   return (
     <div className="page">
       <div className="maincito">
@@ -18,7 +36,7 @@ const Home = () => {
 
           <div className="paquetes">
             <div className="paquete">
-              <div className="corani destinos-foto">
+              <div className="corani destinos-foto" onClick={handleCorani}>
                 <div className="precio">100 Bs</div>
               </div>
               <div className="info">
@@ -28,14 +46,17 @@ const Home = () => {
                   variedad de cabañas que puedes alquilar por una ...
                 </p>
 
-                <button className="mas-info mas-info-corani">
+                <button
+                  className="mas-info mas-info-corani"
+                  onClick={handleCorani}
+                >
                   Más información
                 </button>
               </div>
             </div>
 
             <div className="paquete">
-              <div className="incallajta destinos-foto">
+              <div className="incallajta destinos-foto" onClick={handleIncallajta}>
                 <div className="precio">200 Bs</div>
               </div>
               <div className="info">
@@ -45,14 +66,17 @@ const Home = () => {
                   construcciones, muros y otros rastros de las ruinas...
                 </p>
 
-                <button className="mas-info mas-info-incallajta">
+                <button
+                  className="mas-info mas-info-incallajta"
+                  onClick={handleIncallajta}
+                >
                   Más información
                 </button>
               </div>
             </div>
 
             <div className="paquete">
-              <div className="pairumani destinos-foto">
+              <div className="pairumani destinos-foto" onClick={handlePairumani}>
                 <div className="precio">150 Bs</div>
               </div>
               <div className="info">
@@ -62,14 +86,17 @@ const Home = () => {
                   Parque encuentras diferentes espacios, en ...
                 </p>
 
-                <button className="mas-info mas-info-pairumani">
+                <button
+                  className="mas-info mas-info-pairumani"
+                  onClick={handlePairumani}
+                >
                   Más información
                 </button>
               </div>
             </div>
 
             <div className="paquete">
-              <div className="tarata destinos-foto">
+              <div className="tarata destinos-foto" onClick={handleTarata}>
                 <div className="precio">150 Bs</div>
               </div>
               <div className="info">
@@ -79,14 +106,17 @@ const Home = () => {
                   Cochabamba. En el pueblo podrás disfrutar de su plaza...
                 </p>
 
-                <button className="mas-info mas-info-tarata">
+                <button
+                  className="mas-info mas-info-tarata"
+                  onClick={handleTarata}
+                >
                   Más información
                 </button>
               </div>
             </div>
 
             <div className="paquete">
-              <div className="villa-tunari destinos-foto">
+              <div className="villa-tunari destinos-foto" onClick={handleVillaTunari}>
                 <div className="precio">175 Bs</div>
               </div>
               <div className="info">
@@ -95,7 +125,10 @@ const Home = () => {
                   El pueblo se encuentra en una región de gran belleza natural,
                   en la confluencia de los ríos Espíritu Santo y San Mateo...
                 </p>
-                <button className="mas-info mas-info-villa-tunari">
+                <button
+                  className="mas-info mas-info-villa-tunari"
+                  onClick={handleVillaTunari}
+                >
                   Más información
                 </button>
               </div>
