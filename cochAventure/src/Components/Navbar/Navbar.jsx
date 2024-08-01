@@ -22,11 +22,11 @@ const Navbar = () => {
             <img src="logo.png" alt="Logo"/>
       </div>
       <div className='nav-options'>
-            <label onClick={handleInicio}>Inicio</label>
-            <label onClick={handleDestino}>Destinos</label>
+            <label className='para-hover' onClick={handleInicio}>Inicio</label>
+            <label className='para-hover' onClick={handleDestino}>Destinos</label>
             <label>Acerca de nosotros</label>
             <label>Favoritos</label>
-            <label onClick={handleContacto}>Contáctenos</label>
+            <label className='para-hover' onClick={handleContacto}>Contáctenos</label>
             <button className="btn">Cerrar Sesión</button>
       </div>
     </nav>

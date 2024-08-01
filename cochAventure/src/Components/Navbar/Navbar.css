@@ -34,3 +34,7 @@
     justify-content: right;
     align-items: center;
 }
+
+.para-hover:hover{
+    cursor: pointer;
+}

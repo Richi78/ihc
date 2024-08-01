@@ -44,6 +44,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.destinos-foto:hover{
+    cursor: pointer;
+  }
 
 .corani{
   background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/1d/7c/87/corani-lake.jpg?w=1200&h=-1&s=1');

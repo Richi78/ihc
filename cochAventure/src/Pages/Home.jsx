@@ -36,7 +36,7 @@ const Home = () => {
 
           <div className="paquetes">
             <div className="paquete">
-              <div className="corani destinos-foto">
+              <div className="corani destinos-foto" onClick={handleCorani}>
                 <div className="precio">100 Bs</div>
               </div>
               <div className="info">
@@ -56,7 +56,7 @@ const Home = () => {
             </div>
 
             <div className="paquete">
-              <div className="incallajta destinos-foto">
+              <div className="incallajta destinos-foto" onClick={handleIncallajta}>
                 <div className="precio">200 Bs</div>
               </div>
               <div className="info">
@@ -76,7 +76,7 @@ const Home = () => {
             </div>
 
             <div className="paquete">
-              <div className="pairumani destinos-foto">
+              <div className="pairumani destinos-foto" onClick={handlePairumani}>
                 <div className="precio">150 Bs</div>
               </div>
               <div className="info">
@@ -96,7 +96,7 @@ const Home = () => {
             </div>
 
             <div className="paquete">
-              <div className="tarata destinos-foto">
+              <div className="tarata destinos-foto" onClick={handleTarata}>
                 <div className="precio">150 Bs</div>
               </div>
               <div className="info">
@@ -116,7 +116,7 @@ const Home = () => {
             </div>
 
             <div className="paquete">
-              <div className="villa-tunari destinos-foto">
+              <div className="villa-tunari destinos-foto" onClick={handleVillaTunari}>
                 <div className="precio">175 Bs</div>
               </div>
               <div className="info">
