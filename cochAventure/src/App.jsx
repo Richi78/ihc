@@ -22,6 +22,7 @@ import RutaTarata from "./Pages/Rutas/RutaTarata"
 import RutaVillaTunari from "./Pages/Rutas/RutaVillaTunari"
 import Favoritos from "./Pages/Favoritos/Favoritos"
 import Comprobante from './Pages/Comprobante/Comprobante'; 
+import Acerca from './Pages/AboutUs/Acerca'; 
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <Route path="/Formr" element={<FormReserva />} />
         <Route path="/favoritos" element={<Favoritos />} />
         <Route path="/comprobante" element={<Comprobante />} />
+        <Route path="/acerca" element={<Acerca />} />
       </Routes>
     </BrowserRouter>
   )

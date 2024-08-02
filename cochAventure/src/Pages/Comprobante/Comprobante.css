@@ -5,7 +5,7 @@
 }
 
 .comprobante-content {
-  margin: auto;
+  margin: 50px auto; /* Ajusta el margen superior e inferior */
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -66,4 +66,5 @@
 
 .comprobante-footer {
   margin-top: auto;
+  width: 100%; /* Asegúrate de que el footer cubra todo el ancho */
 }

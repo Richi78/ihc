@@ -1,12 +1,9 @@
 import "./Footer.css";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="foooter">
+    <div id="footer" className="footer">
       <div className="up-section">
         <div className="left-section">
           <h2>Contáctate con nosotros</h2>
@@ -15,13 +12,13 @@ const Footer = () => {
           <p>Dirección: #3344 Jodan, Ayacucho</p> 
         </div>
         <div>
-            <h1>CochAventure</h1>
+          <h1>CochAventure</h1>
         </div>
         <div className="right-section">
-            <FaFacebook size={30}/>
-            <FaInstagram size={30}/>
-            <FaTwitter size={30}/>
-            <FaWhatsapp size={30}/>
+          <FaFacebook size={30} />
+          <FaInstagram size={30} />
+          <FaTwitter size={30} />
+          <FaWhatsapp size={30} />
         </div>
       </div>
       <div className="down-section">
