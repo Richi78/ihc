@@ -65,7 +65,7 @@ const DestinoVillaTunari = () => {
     },
     {
       image: informacionImg,
-      title: "Informacion",
+      title: "Información",
       description:
         "Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.",
         lugar:'actividadvillatunari'

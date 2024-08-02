@@ -8,41 +8,57 @@ import qr from "../../assets/qr.png";
 import master from "../../assets/master.png";
 import paypal from "../../assets/paypal.png";
 
-// Establece el elemento raíz para el modal
 Modal.setAppElement('#root');
 
 const FormPago = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const ticketPrice = location.state?.ticketPrice || 0; 
+  const ticketPrice = location.state?.ticketPrice || 0; // Obtiene el precio del ticket desde el estado
 
   const [ticketCount, setTicketCount] = React.useState(1); 
-  const [isModalOpen, setIsModalOpen] = React.useState(false); // Definir estado del modal
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
+  // Estados para almacenar el nombre y el correo electrónico del usuario
+  const [nombre, setNombre] = React.useState('');
+  const [correo, setCorreo] = React.useState('');
+
+  // Función para incrementar la cantidad de tickets
   const handleIncrement = () => {
     setTicketCount(prevCount => prevCount + 1);
   };
 
+  // Función para decrementar la cantidad de tickets
   const handleDecrement = () => {
-    setTicketCount(prevCount => Math.max(prevCount - 1, 1)); 
+    setTicketCount(prevCount => Math.max(prevCount - 1, 1));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
-    setIsModalOpen(true); 
-  };
-
-  const handleConfirm = () => {
-    setIsModalOpen(false); 
-    navigate('/comprobante');
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false); 
-  };
-
+  // Calcula el monto total basado en la cantidad de tickets
   const totalAmount = ticketCount * ticketPrice;
 
+  // Maneja el envío del formulario
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  // Maneja la confirmación del pago y navega al componente Comprobante enviando los datos necesarios
+  const handleConfirm = () => {
+    setIsModalOpen(false);
+
+    // Navega a Comprobante y pasa los datos como estado
+    navigate('/comprobante', {
+      state: {
+        nombre,
+        correo,
+        monto: totalAmount, // Pasa el monto total
+      },
+    });
+  };
+
+  // Maneja la cancelación del pago
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className='page'>
@@ -67,12 +83,12 @@ const FormPago = () => {
                 className="payment-icon"
               />
               <img
-                src= {qr}
+                src={qr}
                 alt="QR Code"
                 className="payment-icon"
               />
               <img
-                src= {paypal}
+                src={paypal}
                 alt="PayPal"
                 className="payment-icon"
               />
@@ -85,18 +101,25 @@ const FormPago = () => {
               type="text"
               placeholder="Ej. Rodolfo Adrián"
               className="form-input"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)} // Actualiza el estado del nombre
+              required // Campo obligatorio
             />
             <label className="form-label">Correo electrónico</label>
             <input
               type="email"
               placeholder="Ej. rodolfo.rivera88@gmail.com"
               className="form-input"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)} // Actualiza el estado del correo
+              required // Campo obligatorio
             />
             <label className="form-label">Número de la tarjeta</label>
             <input
               type="text"
               placeholder="XXXX XXXX XXXX XXXX"
               className="form-input"
+              required // Campo obligatorio
             />
             <div className="form-row">
               <div className="form-group">
@@ -105,6 +128,7 @@ const FormPago = () => {
                   type="text"
                   placeholder="Ej. 123"
                   className="form-input redux-input"
+                  required // Campo obligatorio
                 />
               </div>
               <div className="form-group">
@@ -113,6 +137,7 @@ const FormPago = () => {
                   type="text"
                   placeholder="MM/YYYY"
                   className="form-input redux-input"
+                  required // Campo obligatorio
                 />
               </div>
             </div>

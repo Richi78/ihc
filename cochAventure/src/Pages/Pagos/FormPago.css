@@ -238,27 +238,27 @@
 }
 
 .modal h2 {
-    margin-bottom: 15px; /* Aumenta el espacio debajo del título */
+    margin-bottom: 15px; 
 }
 
 .modal p {
-    margin-bottom: 20px; /* Aumenta el espacio debajo del mensaje */
+    margin-bottom: 20px; 
 }
 
 .modal-buttons {
     display: flex;
-    justify-content: flex-end; /* Alinea los botones al lado derecho */
-    gap: 10px; /* Añade espacio entre los botones */
+    justify-content: flex-end; 
+    gap: 10px; 
 }
 
 .modal-button {
     background: #007bff;
     color: white;
     border: none;
-    padding: 8px 15px; /* Ajusta el tamaño del padding */
+    padding: 8px 15px; 
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-size: 14px; 
 }
 
 .modal-button:hover {

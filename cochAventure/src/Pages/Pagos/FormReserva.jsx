@@ -1,81 +1,79 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Modal from 'react-modal';
 import './FormPago.css';
 
+import visa from '../../assets/visa.png';
+import qr from '../../assets/qr.png';
+import master from '../../assets/master.png';
+import paypal from '../../assets/paypal.png';
 
-import visa from "../../assets/visa.png";
-import qr from "../../assets/qr.png";
-import master from "../../assets/master.png";
-import paypal from "../../assets/paypal.png";
-
-// Establece el elemento raíz para el modal
 Modal.setAppElement('#root');
 
 const FormReserva = () => {
-  const location = useLocation();
   const navigate = useNavigate();
-  const ticketPrice = location.state?.ticketPrice || 0; 
 
-  const [ticketCount, setTicketCount] = React.useState(1); 
-  const [isModalOpen, setIsModalOpen] = React.useState(false); // Definir estado del modal
+  const ticketPrice = 100; // Precio fijo del ticket
 
+  const [ticketCount, setTicketCount] = React.useState(1);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  // Campos de formulario
+  const [nombre, setNombre] = React.useState('');
+  const [correo, setCorreo] = React.useState('');
+  const [monto, setMonto] = React.useState(ticketPrice / 2); // Calcula el monto parcial automáticamente
+
+  // Maneja la cantidad de tickets
   const handleIncrement = () => {
-    setTicketCount(prevCount => prevCount + 1);
+    setTicketCount((prevCount) => prevCount + 1);
   };
 
   const handleDecrement = () => {
-    setTicketCount(prevCount => Math.max(prevCount - 1, 1)); 
+    setTicketCount((prevCount) => Math.max(prevCount - 1, 1));
   };
 
+  // Actualiza el monto parcial basado en la cantidad de tickets
+  React.useEffect(() => {
+    setMonto((ticketCount * ticketPrice) / 2);
+  }, [ticketCount]);
+
   const handleSubmit = (event) => {
-    event.preventDefault(); 
-    setIsModalOpen(true); 
+    event.preventDefault();
+    setIsModalOpen(true);
   };
 
   const handleConfirm = () => {
-    setIsModalOpen(false); 
-    navigate('/comprobante');
+    setIsModalOpen(false);
+
+    // Navega a Comprobante y envía los datos como estado, incluyendo el monto parcial
+    navigate('/comprobante', {
+      state: {
+        nombre,
+        correo,
+        monto,
+      },
+    });
   };
 
   const handleCancel = () => {
-    setIsModalOpen(false); 
+    setIsModalOpen(false);
   };
 
-  const totalAmount = ticketCount * ticketPrice;
-  const partialAmount = totalAmount / 2;
-
   return (
-    <div className='page'>
+    <div className="page">
       <div className="container">
-        <div className="imagen-form"></div> 
+        <div className="imagen-form"></div>
         <div className="form-container">
-           <h2 className="form-title">Formulario de Reserva</h2>
+          <h2 className="form-title">Formulario de Reserva</h2>
 
           <div className="payment-methods">
             <h3 className="payment-title">Métodos de pago</h3>
             <div>
-              <img
-                src={visa}
-                alt="Visa"
-                className="payment-icon"
-              />
-              <img
-                src={master}
-                alt="MasterCard"
-                className="payment-icon"
-              />
-              <img
-                src= {qr}
-                alt="QR Code"
-                className="payment-icon"
-              />
-              <img
-                src= {paypal}
-                alt="PayPal"
-                className="payment-icon"
-              />
+              <img src={visa} alt="Visa" className="payment-icon" />
+              <img src={master} alt="MasterCard" className="payment-icon" />
+              <img src={qr} alt="QR Code" className="payment-icon" />
+              <img src={paypal} alt="PayPal" className="payment-icon" />
             </div>
           </div>
           <h4 className="data-title">Introduce tus datos</h4>
@@ -85,12 +83,18 @@ const FormReserva = () => {
               type="text"
               placeholder="Ej. Rodolfo Adrián"
               className="form-input"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              required // Asegura que el campo sea obligatorio
             />
             <label className="form-label">Correo electrónico</label>
             <input
               type="email"
               placeholder="Ej. rodolfo.rivera88@gmail.com"
               className="form-input"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)}
+              required // Asegura que el campo sea obligatorio
             />
             <label className="form-label">Número de la tarjeta</label>
             <input
@@ -119,18 +123,32 @@ const FormReserva = () => {
             <div className="ticket-count-row">
               <span className="ticket-label">Cantidad</span>
               <div className="ticket-controls">
-                <button type="button" onClick={handleDecrement} className="control-button">-</button>
+                <button
+                  type="button"
+                  onClick={handleDecrement}
+                  className="control-button"
+                >
+                  -
+                </button>
                 <span className="ticket-count">{ticketCount}</span>
-                <button type="button" onClick={handleIncrement} className="control-button">+</button>
+                <button
+                  type="button"
+                  onClick={handleIncrement}
+                  className="control-button"
+                >
+                  +
+                </button>
               </div>
             </div>
             <div className="amount-row">
               <span className="amount-label">Monto total: </span>
-              <span className="amount-value precio-tacha precio-form">{totalAmount} Bs</span>
+              <span className="amount-value precio-tacha precio-form">
+                {ticketCount * ticketPrice} Bs
+              </span>
             </div>
             <div className="amount-row">
               <span className="amount-label">Monto parcial: </span>
-              <span className="amount-value precio-form">{partialAmount} Bs</span>
+              <span className="amount-value precio-form">{monto} Bs</span>
             </div>
             <div className="checkbox-row">
               <input type="checkbox" id="saveData" className="checkbox" />
@@ -156,8 +174,12 @@ const FormReserva = () => {
         <h2>Confirmación de Pago</h2>
         <p>¿Estás seguro de realizar este pago?</p>
         <div className="modal-buttons">
-          <button onClick={handleConfirm} className="modal-button">Aceptar</button>
-          <button onClick={handleCancel} className="modal-button">Cancelar</button>
+          <button onClick={handleConfirm} className="modal-button">
+            Aceptar
+          </button>
+          <button onClick={handleCancel} className="modal-button">
+            Cancelar
+          </button>
         </div>
       </Modal>
       <div className="piejaja">
