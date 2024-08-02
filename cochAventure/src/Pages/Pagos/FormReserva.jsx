@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Modal from 'react-modal';
 import './FormPago.css';
@@ -13,9 +13,8 @@ Modal.setAppElement('#root');
 
 const FormReserva = () => {
   const navigate = useNavigate();
-
-  const ticketPrice = 100; // Precio fijo del ticket
-
+  const location = useLocation();
+  const ticketPrice = location.state?.ticketPrice || 0;
   const [ticketCount, setTicketCount] = React.useState(1);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
