@@ -7,6 +7,7 @@
 .comprobante-content {
   margin: auto;
   margin-top: 80px;
+  margin-bottom: 40px;
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -16,7 +17,6 @@
   text-align: left;
 }
 
-/* Estilo del título del comprobante */
 .comprobante-title {
   text-align: center;
   font-size: 1.5rem;
@@ -35,23 +35,22 @@
 
 .comprobante-data {
   flex: 1;
-  text-align: right; /* Alinea el texto a la derecha */
-  padding-left: 20px; /* Añade espacio a la izquierda */
+  text-align: right; 
+  padding-left: 20px; 
 }
 
-/* Estilo de los botones */
+
 .comprobante-buttons {
   display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  gap: 10px; /* Espacio entre los botones */
+  justify-content: center; 
+  gap: 10px; 
   margin-top: 20px;
 }
 
-/* Aplica estilo basado en tus clases actuales */
 .comprobante-button {
   padding: 0.75rem 3rem;
   background-color: white;
-  color: #191919; /* Color del texto */
+  color: #191919; 
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -69,5 +68,5 @@
 
 .comprobante-footer {
   margin-top: auto;
-  width: 100%; /* Asegúrate de que el footer cubra todo el ancho */
+  width: 100%; 
 }
