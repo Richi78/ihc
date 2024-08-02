@@ -36,6 +36,11 @@
     cursor: pointer;
 }
 
+.active {
+    background-color: white; /* Color de fondo para la opción activa */
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+  }
 .cerrar-sesion {
     background-color: white;
 }

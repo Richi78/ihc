@@ -24,7 +24,8 @@ const Comprobante = () => {
   };
 
   return (
-    <div className="comprobante-container">
+    <div className="page">
+<div className="comprobante-container">
       <div className="comprobante-content">
         <h1 className="comprobante-title">Comprobante de Pago</h1>
 
@@ -76,6 +77,8 @@ const Comprobante = () => {
         <Footer />
       </div>
     </div>
+    </div>
+    
   );
 };
 
