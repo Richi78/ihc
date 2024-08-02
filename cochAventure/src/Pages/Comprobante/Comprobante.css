@@ -6,6 +6,7 @@
 
 .comprobante-content {
   margin: auto;
+  margin-top: 80px;
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -49,8 +50,8 @@
 /* Aplica estilo basado en tus clases actuales */
 .comprobante-button {
   padding: 0.75rem 3rem;
-  background-color: #52AABA; /* Color de fondo principal */
-  color: #ffffff; /* Color del texto */
+  background-color: white;
+  color: #191919; /* Color del texto */
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -61,7 +62,9 @@
 }
 
 .comprobante-button:hover {
-  background-color: #0056b3; /* Color de fondo al pasar el ratón */
+  background-color: #191919;
+  color: white;
+  transition: 0.4s;
 }
 
 .comprobante-footer {

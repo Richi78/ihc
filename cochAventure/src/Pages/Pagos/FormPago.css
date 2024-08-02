@@ -85,13 +85,9 @@
     border-radius: 15px;
     background-color: white;
     padding: 10px 25px;
-    width: 30px; 
-    height: auto; 
+    width: 28px; 
+    height: 25px; 
     margin: 0 10px; 
-}
-
-.payment-icon:hover{
-    background-color: #52AABA;
 }
 
 /* Títulos de datos */
@@ -165,7 +161,7 @@
 /* Estilos del botón de enviar */
 .submit-button {
     padding: 0.75rem 3rem;
-    background-color: #52AABA;
+    background-color: black;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -176,7 +172,7 @@
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #f3be21;
 }
 
 .button-box{

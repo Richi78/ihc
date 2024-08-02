@@ -8,11 +8,11 @@ import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
 import './Destino.jsx'
-import busIcon from '../../assets/bus.png';
-import dateIcon from '../../assets/date.png';
-import foodIcon from '../../assets/food.png';
-import timeIcon from '../../assets/time.png';
-import guiaIcon from '../../assets/guia.png';
+import busIcon from '../../assets/bus2.png';
+import dateIcon from '../../assets/date2.png';
+import foodIcon from '../../assets/food2.png';
+import timeIcon from '../../assets/time2.png';
+import guiaIcon from '../../assets/guia2.png';
 const DestinoTarata = () => {
 
 const ticketPrice = 150; 
