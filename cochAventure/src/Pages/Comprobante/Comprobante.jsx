@@ -6,11 +6,11 @@ import './Comprobante.css';
 const Comprobante = () => {
   const location = useLocation();
 
-  // Extrae datos de la ubicación
-  const { nombre, correo, monto } = location.state || {
+  const { nombre, correo, monto,motivo } = location.state || {
     nombre: 'N/A',
     correo: 'N/A',
     monto: 0,
+    motivo: 'N/A',
   };
 
   const horaYFechaActual = new Date().toLocaleString();
@@ -56,7 +56,7 @@ const Comprobante = () => {
         <div className="comprobante-row">
           <label className="comprobante-label">Motivo:</label>
           <div className="comprobante-data">
-            Reserva del tour de Pairumani
+            {motivo}
           </div>
         </div>
 

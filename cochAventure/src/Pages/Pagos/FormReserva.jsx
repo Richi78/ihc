@@ -14,16 +14,16 @@ Modal.setAppElement('#root');
 const FormReserva = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const ticketPrice = location.state?.ticketPrice || 0;
+  const { ticketPrice, destinationTitle } = location.state || {}; 
+
+  const motivo = `Se realizo la reserva del tour para ${destinationTitle}`; 
   const [ticketCount, setTicketCount] = React.useState(1);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
-  // Campos de formulario
   const [nombre, setNombre] = React.useState('');
   const [correo, setCorreo] = React.useState('');
-  const [monto, setMonto] = React.useState(ticketPrice / 2); // Calcula el monto parcial automáticamente
+  const [monto, setMonto] = React.useState(ticketPrice / 2); 
 
-  // Maneja la cantidad de tickets
   const handleIncrement = () => {
     setTicketCount((prevCount) => prevCount + 1);
   };
@@ -32,7 +32,6 @@ const FormReserva = () => {
     setTicketCount((prevCount) => Math.max(prevCount - 1, 1));
   };
 
-  // Actualiza el monto parcial basado en la cantidad de tickets
   React.useEffect(() => {
     setMonto((ticketCount * ticketPrice) / 2);
   }, [ticketCount]);
@@ -45,12 +44,12 @@ const FormReserva = () => {
   const handleConfirm = () => {
     setIsModalOpen(false);
 
-    // Navega a Comprobante y envía los datos como estado, incluyendo el monto parcial
     navigate('/comprobante', {
       state: {
         nombre,
         correo,
         monto,
+        motivo,
       },
     });
   };
@@ -64,7 +63,8 @@ const FormReserva = () => {
       <div className="container">
         <div className="imagen-form"></div>
         <div className="form-container">
-          <h2 className="form-title">Formulario de Reserva</h2>
+          <h2 className="form-title">Formulario de Reserva<br/>
+            Tour para {destinationTitle}</h2>
 
           <div className="payment-methods">
             <h3 className="payment-title">Métodos de pago</h3>

@@ -15,6 +15,7 @@ import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
 const DestinoVillaTunari = () => {
   const ticketPrice = 175; 
+  const destinationTitle = "Villa Tunari";
 
   const navigate = useNavigate();
 
@@ -43,11 +44,11 @@ const DestinoVillaTunari = () => {
           text: "175 Bs x Persona",
           buttons: [
             { label: 'Comprar Tour', 
-            onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+            onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
           },
             {
               label: 'Reservar Tour',
-              onClick: () => {navigate('/formr', { state: { ticketPrice } });
+              onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
               },
             },
           ],

@@ -18,7 +18,8 @@ const DestinoPairumani = () => {
   const ticketPrice = 150; 
 
     const navigate = useNavigate();
-
+  
+    const destinationTitle = "Pairumani";
     const detallesItems = [
         {
           title: 'INCLUYE',
@@ -44,11 +45,11 @@ const DestinoPairumani = () => {
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]

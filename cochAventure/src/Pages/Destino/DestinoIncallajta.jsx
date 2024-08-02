@@ -16,7 +16,8 @@ import guiaIcon from '../../assets/guia2.png';
 
 const DestinoIncallajta = () => {
     const ticketPrice = 200;
-
+   
+    const destinationTitle = "Incallajta";
     const navigate = useNavigate();
     const detallesItems = [
         {
@@ -43,11 +44,11 @@ const DestinoIncallajta = () => {
               text: '200 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                  onClick: () => {navigate('/formr', { state: { ticketPrice,destinationTitle } });
                   },
                 },
               ]

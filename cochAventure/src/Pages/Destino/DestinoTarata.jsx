@@ -15,8 +15,8 @@ import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
 const DestinoTarata = () => {
 
-const ticketPrice = 150; 
-
+    const ticketPrice = 150; 
+    const destinationTitle = "Tarata";
     const navigate = useNavigate();
 
     const detallesItems = [
@@ -44,11 +44,11 @@ const ticketPrice = 150;
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]
