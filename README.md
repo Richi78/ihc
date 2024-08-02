@@ -12,4 +12,4 @@ Para iniciar el servidor.
 
 Dirigirse a un navegador y buscar: localhost:5173
 
-Nota: Se debe tener instlada Node JS.
+Nota: Se debe tener instalado Node JS.
