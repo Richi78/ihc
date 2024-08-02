@@ -25,8 +25,8 @@
     padding: 10px 20px; /* Tamaño más grande de los botones */
     border: none;
     border-radius: 4px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
     font-size: 1.2rem; /* Tamaño de fuente más grande para los botones */
   }
