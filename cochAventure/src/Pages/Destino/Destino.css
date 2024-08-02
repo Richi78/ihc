@@ -30,7 +30,8 @@
   
   .imagen-derecha {
     width: 60vw;
-    padding: 2rem 10rem;
+    padding: 0 2rem;
+    max-width: 500px;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -52,7 +53,6 @@
     flex: 1;
     margin: 0 10px;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 4px;
   }
   
@@ -69,6 +69,11 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+  }
+
+  .tarjeta:hover{
+    background-color: #f5c670;
+    transition: 0.4s;
   }
   
   .icono {

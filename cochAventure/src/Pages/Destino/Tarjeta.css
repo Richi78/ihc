@@ -5,13 +5,14 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
-  background-color: #eadc74;
+  background-color: whitesmoke;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
 }
 
 .tarjeta:hover {
   transform: translateY(-10px);
+  cursor: pointer;
 }
 .tarjeta:active {
   transform: translateY(-2px); 
@@ -23,11 +24,8 @@
 }
 
 .imagen img {
-  width: 100%;
+  width: 80px;
   height: auto;
-  max-width: 150px; /* Tamaño máximo de la imagen */
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tarjeta h3 {

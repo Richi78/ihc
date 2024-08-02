@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  background-color: #eadc74; /* Fondo uniforme para todo el segmento */
+  color: white;
+  background-color: #191919; /* Fondo uniforme para todo el segmento */
   padding: 10px; /* Espacio interior */
 }
 
@@ -10,7 +11,6 @@
   flex: 1;
   margin: 0 10px;
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 4px;
   background-color: inherit; /* Hereda el fondo del contenedor principal */
 }

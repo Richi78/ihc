@@ -26,8 +26,7 @@ const Navbar = () => {
             <img src={logo} alt="Logo" width={100} height={60}/>
       </div>
       <div className='nav-options'>
-            <label>Inicio</label>
-            <label className='para-hover' onClick={handleDestino}>Destinos</label>
+            <label className='para-hover' onClick={handleDestino}>Inicio</label>
             <label className='para-hover' onClick={handleFavoritos}>Favoritos</label>
             <label className='para-hover' onClick={handleContacto}>Contáctenos</label>
             <label>Acerca de nosotros</label>
