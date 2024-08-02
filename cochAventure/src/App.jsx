@@ -33,6 +33,7 @@ function App() {
       <Navbar/>
       <Routes>
         {/* aqui las rutas */}
+        <Route index element={<Home />} />
         <Route path="/rutacorani" element={<RutaCorani/>} />
         <Route path="/corani" element={<DestinoCorani/>} />
         <Route path="/incallajta" element={<DestinoIncallajta/>} />
