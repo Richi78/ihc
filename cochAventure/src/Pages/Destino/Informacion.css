@@ -50,6 +50,11 @@
   width: fit-content;
 }
 
+.favo-container:hover {
+  background-color: #febd59;
+  transition: 0.4s;
+}
+
 .favo-icon {
   width: 24px; /* Ajusta el tamaño de la imagen del icono */
   height: 24px;
