@@ -5,9 +5,11 @@ import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faPersonHarassing } from '@fortawesome/free-solid-svg-icons'; 
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from './Autenticacion';
 
 const Autorizacion = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [view, setView] = useState('login'); // Cambia el estado para mostrar login, register, link
   const [showPassword, setShowPassword] = useState(false); // State for password visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,6 +37,7 @@ const Autorizacion = () => {
   const handleSubmitSesion = (event) => {
     event.preventDefault();
     if (nombre !== "error") {
+      login();
       navigate('/home');
     }else{
       setIsModalOpen(true);
@@ -66,9 +69,9 @@ const Autorizacion = () => {
             <h2 className="centrado">Regístrate</h2>
             <form onSubmit={handleSubmitRegistro}>
               <label className="campo-dato">Nombre de usuario</label>
-              <input type="text" placeholder="alberto123" className="input-field" required/>
+              <input type="text" placeholder="Ejm: alberto123" className="input-field" required/>
               <label className="campo-dato">Correo Electrónico</label>
-              <input type="email" placeholder="correoElectronico@ejemplo.com" className="input-field" required/>
+              <input type="email" placeholder="Ejm: correoElectronico@ejemplo.com" className="input-field" required/>
               <label className="campo-dato">Contraseña</label>
               <div className="password-field">
                 <input
@@ -107,7 +110,7 @@ const Autorizacion = () => {
               overlayClassName="modal-overlay"
             >
               <h2>Se ha registrado exitosamente</h2>
-              <p>Ingrese a la pagina con los datos registrados</p>
+              <p>Ingrese a la pagina con los datos registrados.</p>
               <div className="modal-buttons">
                 <button onClick={handleConfirmToLogin} className="modal-button">Aceptar</button>
               </div>
@@ -136,7 +139,7 @@ const Autorizacion = () => {
               <h4 className="campo-dato">Correo Electrónico</h4>
               <input type="email" placeholder="correoelectronico@ejemplo.com" className="input-field" required/>
               <button type="submit" className="auth-button">Enviar link de recuperación</button>
-              <p>Ya tienes una cuenta? <span onClick={() => setView('login')} className="link-text">Inicia Sesión</span></p>
+              <p className='login-register-text'>¿Ya tienes una cuenta? <span onClick={() => setView('login')} className="link-text">Inicia Sesión</span></p>
             </form>
             <Modal
               isOpen={isModalOpen}
@@ -145,8 +148,8 @@ const Autorizacion = () => {
               className="modal"
               overlayClassName="modal-overlay"
             >
-              <h2>Se enviara el link al correo electronico indicado</h2>
-              <p>Se enviara el link para reestablecer contraseña solo si existe una cuenta con el correo electronico</p>
+              <h2>Se enviará el link al correo electrónico indicado.</h2>
+              <p>Se enviará el link para reestablecer contraseña solo si existe una cuenta con el correo electrónico.</p>
               <div className="modal-buttons">
                 <button onClick={handleConfirmToLogin} className="modal-button">Aceptar</button>
               </div>
@@ -159,10 +162,10 @@ const Autorizacion = () => {
           <div className="auth-container">
             <h2 className="centrado">Bienvenido</h2>
             <form onSubmit={handleSubmitSesion}>
-              <label className="campo-dato">Usuario</label>
+              <label className="campo-dato">Nombre de usuario</label>
               <input 
                 type="text" 
-                placeholder="Usuario"
+                placeholder="Ingrese su nombre de usuario"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
                 className="input-field" 
@@ -179,9 +182,9 @@ const Autorizacion = () => {
                   <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
                 </span>
               </div>
-              <p className="link-text" onClick={() => setView('link')}>Olvidaste tu contraseña?</p>
+              <p className="link-text" onClick={() => setView('link')}>¿Olvidaste tu contraseña?</p>
               <button type="submit" className="auth-button">Iniciar Sesión</button>
-              <p>No tienes una cuenta? <span onClick={() => setView('register')} className="link-text">Regístrate</span></p>
+              <p className='login-register-text'>¿No tienes una cuenta? <span onClick={() => setView('register')} className="link-text">Regístrate</span></p>
             </form>
             <Modal
               isOpen={isModalOpen}
@@ -191,7 +194,7 @@ const Autorizacion = () => {
               overlayClassName="modal-overlay"
             >
               <h2>No se pudo iniciar Sesión</h2>
-              <p>La cuenta no ha sido encontrada, revise los datos de su cuenta</p>
+              <p>La cuenta no ha sido encontrada, por favor revise que los datos de su cuenta estén escritos correctamente.</p>
               <div className="modal-buttons">
                 <button onClick={handleConfirmSesion} className="modal-button">Aceptar</button>
               </div>
