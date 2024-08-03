@@ -1,5 +1,4 @@
 .paquete {
-    background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
@@ -51,7 +50,6 @@
 }
 
 .mas-info {
-    background-color: #d9d9d9;
     border: none;
     padding: 10px;
     width: 100%;
@@ -61,12 +59,12 @@
 }
 
 .mas-info:hover{
-    filter: brightness(0.9);
+    background-color: #febd59;
     transition: 0.6s;
 }
 
 .precio{
-    background-color: antiquewhite;
+    background-color: white;
     width: fit-content;
     padding: 3px 5px;
 }

@@ -8,15 +8,16 @@ import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
 import './Destino.jsx'
-import busIcon from '../../assets/bus.png';
-import dateIcon from '../../assets/date.png';
-import foodIcon from '../../assets/food.png';
-import timeIcon from '../../assets/time.png';
-import guiaIcon from '../../assets/guia.png';
+import busIcon from '../../assets/bus2.png';
+import dateIcon from '../../assets/date2.png';
+import foodIcon from '../../assets/food2.png';
+import timeIcon from '../../assets/time2.png';
+import guiaIcon from '../../assets/guia2.png';
 
 const DestinoIncallajta = () => {
     const ticketPrice = 200;
-
+   
+    const destinationTitle = "Incallajta";
     const navigate = useNavigate();
     const detallesItems = [
         {
@@ -43,11 +44,11 @@ const DestinoIncallajta = () => {
               text: '200 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                  onClick: () => {navigate('/formr', { state: { ticketPrice,destinationTitle } });
                   },
                 },
               ]
@@ -57,7 +58,7 @@ const DestinoIncallajta = () => {
       ];
       const tarjetasItems = [
         { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadincallajta' },
-        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadincallajta' },
+        { image: informacionImg, title: 'Información', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadincallajta' },
         { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'actividadincallajta' },
       ];
       return (

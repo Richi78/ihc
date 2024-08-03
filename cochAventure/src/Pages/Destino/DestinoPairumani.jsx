@@ -8,17 +8,18 @@ import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
 import './Destino.jsx'
-import busIcon from '../../assets/bus.png';
-import dateIcon from '../../assets/date.png';
-import foodIcon from '../../assets/food.png';
-import timeIcon from '../../assets/time.png';
-import guiaIcon from '../../assets/guia.png';
+import busIcon from '../../assets/bus2.png';
+import dateIcon from '../../assets/date2.png';
+import foodIcon from '../../assets/food2.png';
+import timeIcon from '../../assets/time2.png';
+import guiaIcon from '../../assets/guia2.png';
 
 const DestinoPairumani = () => {
   const ticketPrice = 150; 
 
     const navigate = useNavigate();
-
+  
+    const destinationTitle = "Pairumani";
     const detallesItems = [
         {
           title: 'INCLUYE',
@@ -44,11 +45,11 @@ const DestinoPairumani = () => {
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]
@@ -58,7 +59,7 @@ const DestinoPairumani = () => {
       ];
       const tarjetasItems = [
         { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar: 'actividadpairumani' },
-        { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar: 'actividadpairumani' },
+        { image: informacionImg, title: 'Información', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar: 'actividadpairumani' },
         { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar: 'actividadpairumani' },
       ];
       return (

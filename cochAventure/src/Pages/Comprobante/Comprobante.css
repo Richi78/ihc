@@ -1,177 +1,72 @@
-/* body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f2f2f2;
-    margin-bottom: 30px !important;
-} */
-
-.anchor{
-    max-width: 33rem;
+.comprobante-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.precio-tacha{
-    text-decoration: line-through;
-    color: #cccccc;
-}
-.imagen-form{
-    background-image: url("https://www.rentadeautobusesycamionetas.com/wp-content/uploads/2021/09/consejos-para-viajar-en-bus-y-evitar-contagio-de-coronavirus.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 705px;
-}
-
-/* Estilos generales para el cuerpo */
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
-
-/* Contenedor principal */
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    width: 100%;
+.comprobante-content {
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #eadc74;
+  text-align: left;
 }
 
-/* Contenedor del formulario */
-.form-container {
-    width: 100%;
-    max-width: 600px;
-    padding: 30px;
+.comprobante-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-/* Título del formulario */
-.form-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.7rem;
+.comprobante-row {
+  display: flex;
+  margin-bottom: 10px;
 }
 
-/* Métodos de pago */
-.payment-methods {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+.comprobante-label {
+  width: 200px;
+  font-weight: bold;
 }
 
-.payment-title {
-    font-size: 1.125rem;
-    font-weight: bold;
+.comprobante-data {
+  flex: 1;
+  text-align: right; 
+  padding-left: 20px; 
 }
 
-.payment-icon {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    padding: 10px 25px;
+
+.comprobante-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+  margin-top: 20px;
 }
 
-/* Títulos de datos */
-.data-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.comprobante-button {
+  padding: 0.75rem 3rem;
+  background-color: white;
+  color: #191919; 
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del formulario */
-.form-label {
-    display: block;
-    margin-bottom: 0.25rem;
+.comprobante-button:hover {
+  background-color: #191919;
+  color: white;
+  transition: 0.4s;
 }
 
-.form-input {
-    width: 96%;
-    padding: 0.5rem;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.precio-form{
-    font-size: 1.3rem;
-    padding-left: 10px;
-}
-.redux-input{
-    width: 92%;
-}
-
-/* Contenedor de grupos de formulario */
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.form-group {
-    width: 48%;
-}
-
-.amount-row {
-    margin-bottom: 1rem;
-}
-
-.amount-label {
-    font-weight: bold;
-    margin-block: auto;
-}
-
-.amount-value {
-    font-weight: bold;
-}
-
-/* Estilos del checkbox */
-.checkbox-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.checkbox {
-    margin-right: 0.5rem;
-}
-
-.checkbox-label {
-    font-size: 0.875rem;
-}
-
-/* Estilos del botón de enviar */
-.submit-button {
-    padding: 0.75rem 3rem;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-    background-color: #0056b3;
-}
-
-.button-box{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+.comprobante-footer {
+  margin-top: auto;
+  width: 100%; 
 }

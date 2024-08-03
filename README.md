@@ -1,13 +1,15 @@
-luego de clonar el repositorio ingresar al directorio 
+Luego de clonar el repositorio ingresar al directorio. 
 
     # cd cochAventure 
 
-luego instalar paquetes
+Para instalar paquetes.
 
     # npm install
 
-para iniciar el servidor
+Para iniciar el servidor.
 
     # npm run dev
 
+Dirigirse a un navegador y buscar: localhost:5173
 
+Nota: Se debe tener instalado Node JS.

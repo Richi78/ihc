@@ -3,14 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #febd59;
+    background-color: #f3be21;
     color: black;
     min-height: 3rem;
     z-index: 5;
     top: 0;
     left: 0;
     width: 100vw;
-    border-bottom: 2px solid black;
 }
 
 .navBar h2 {
@@ -37,6 +36,14 @@
     cursor: pointer;
 }
 
+
 .cerrar-sesion {
-    background-color: #d9d9d9;
+    background-color: white;
+}
+
+.cerrar-sesion:hover{
+    background-color: #191919;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
 }

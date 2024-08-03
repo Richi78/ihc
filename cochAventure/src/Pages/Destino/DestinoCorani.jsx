@@ -8,15 +8,15 @@ import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png'; 
 import rutasImg from '../../assets/la-carretera.png'; 
 import './Destino.css'; 
-import busIcon from '../../assets/bus.png'; 
-import dateIcon from '../../assets/date.png'; 
-import foodIcon from '../../assets/food.png'; 
-import timeIcon from '../../assets/time.png'; 
-import guiaIcon from '../../assets/guia.png'; 
+import busIcon from '../../assets/bus2.png'; 
+import dateIcon from '../../assets/date2.png'; 
+import foodIcon from '../../assets/food2.png'; 
+import timeIcon from '../../assets/time2.png'; 
+import guiaIcon from '../../assets/guia2.png'; 
 
 const DestinoCorani = () => {
     const ticketPrice = 100; 
-
+    const destinationTitle = "Corani";
     const navigate = useNavigate();
 
     const detallesItems = [
@@ -44,11 +44,11 @@ const DestinoCorani = () => {
                     text: '100 Bs x Persona',
                     buttons: [
                       { label: 'Comprar Tour', 
-                      onClick:() => {navigate('/formp',{state:{ticketPrice}})} 
+                      onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle }})} 
                     },
                       {
                         label: 'Reservar Tour',
-                        onClick: () => {navigate('/formr', { state: { ticketPrice } });
+                        onClick: () => {navigate('/formr', { state: { ticketPrice, destinationTitle  } });
                         },
                       },
                     ],

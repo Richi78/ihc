@@ -1,81 +1,85 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
-import './Comprobante.css'
+import './Comprobante.css'; 
 
-const FormPago = () => {
+const Comprobante = () => {
+  const location = useLocation();
+
+  const { nombre, correo, monto,motivo } = location.state || {
+    nombre: 'N/A',
+    correo: 'N/A',
+    monto: 0,
+    motivo: 'N/A',
+  };
+
+  const horaYFechaActual = new Date().toLocaleString();
+
+  const handleDescargarComprobante = () => {
+    console.log('Descargando comprobante...');
+  };
+
+  const handleEnviarCorreo = () => {
+    console.log(`Enviando comprobante a ${correo}...`);
+  };
+
   return (
-    <div className='page'>
-      <div className="container">
-        <div className="imagen-form"></div>
-        <div className="form-container">
-           <h2 className="form-title" >  {/*style="font-size: 1.7rem;" */}
-            Comprobante de pago
-          </h2>
+    <div className="page">
+<div className="comprobante-container">
+      <div className="comprobante-content">
+        <h1 className="comprobante-title">Comprobante de Pago</h1>
 
-          
-          <h4 className="data-title">Introduce tus datos</h4>
-          <form>
-            <label className="form-label">Nombre Completo</label>
-            <input
-              type="text"
-              placeholder="Ej. Rodolfo Adrián"
-              className="form-input"
-            />
-            <label className="form-label">Correo electrónico</label>
-            <input
-              type="email"
-              placeholder="Ej. rodolfo.rivera88@gmail.com"
-              className="form-input"
-            />
-            <label className="form-label">Número de la tarjeta</label>
-            <input
-              type="text"
-              placeholder="XXXX XXXX XXXX XXXX"
-              className="form-input"
-            />
-            <div className="form-row">
-              <div className="form-group">
-                <label className="form-label">CVV</label>
-                <input
-                  type="text"
-                  placeholder="Ej. 123"
-                  className="form-input redux-input"
-                />
-              </div>
-              <div className="form-group">
-                <label className="form-label">Fecha de vencimiento</label>
-                <input
-                  type="text"
-                  placeholder="MM/YYYY"
-                  className="form-input redux-input"
-                />
-              </div>
-            </div>
-            <div className="amount-row">
-              <span className="amount-label" > {/* style="margin-block: auto;"*/}
-                Monto total:{" "}
-              </span>
-              <span className="amount-value precio-form">200 Bs</span>
-            </div>
-            
-            <div className="checkbox-row">
-              <input type="checkbox" id="saveData" className="checkbox" />
-              <label htmlFor="saveData" className="checkbox-label">
-                Guardar datos para futuras compras
-              </label>
-            </div>
-            <div className="button-box">
-              <button type="submit" className="submit-button">
-                Comprar ahora
-              </button>
-            </div>
-          </form>
+        <div className="comprobante-row">
+          <label className="comprobante-label">Hora:</label>
+          <div className="comprobante-data">{horaYFechaActual}</div>
+        </div>
+        <div className="comprobante-row">
+          <label className="comprobante-label">De:</label>
+          <div className="comprobante-data">{nombre}</div>
+        </div>
+        <div className="comprobante-row">
+          <label className="comprobante-label">Para:</label>
+          <div className="comprobante-data">CochaAventure</div>
+        </div>
+        <div className="comprobante-row">
+          <label className="comprobante-label">Banco Destino:</label>
+          <div className="comprobante-data">Banco Visa S.A.</div>
+        </div>
+        <div className="comprobante-row">
+          <label className="comprobante-label">Nro de Cuenta:</label>
+          <div className="comprobante-data">234252351</div>
+        </div>
+        <div className="comprobante-row">
+          <label className="comprobante-label">Monto:</label>
+          <div className="comprobante-data">{monto} Bs</div>
+        </div>
+        <div className="comprobante-row">
+          <label className="comprobante-label">Motivo:</label>
+          <div className="comprobante-data">
+            {motivo}
+          </div>
+        </div>
+
+        <div className="comprobante-buttons">
+          <button
+            className="comprobante-button"
+            onClick={handleDescargarComprobante}
+          >
+            Descargar Comprobante
+          </button>
+          <button className="comprobante-button" onClick={handleEnviarCorreo}>
+            Enviar al Correo
+          </button>
         </div>
       </div>
-      <div className="piejaja">
+
+      <div className="comprobante-footer">
         <Footer />
       </div>
     </div>
+    </div>
+    
   );
 };
 
-export default FormPago;
+export default Comprobante;

@@ -8,41 +8,51 @@ import qr from "../../assets/qr.png";
 import master from "../../assets/master.png";
 import paypal from "../../assets/paypal.png";
 
-// Establece el elemento raíz para el modal
 Modal.setAppElement('#root');
 
 const FormPago = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const ticketPrice = location.state?.ticketPrice || 0; 
+  const { ticketPrice, destinationTitle } = location.state || {};  
 
+  const motivo = `Se realizo el pago del tour para ${destinationTitle}`; 
   const [ticketCount, setTicketCount] = React.useState(1); 
-  const [isModalOpen, setIsModalOpen] = React.useState(false); // Definir estado del modal
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  const [nombre, setNombre] = React.useState('');
+  const [correo, setCorreo] = React.useState('');
 
   const handleIncrement = () => {
     setTicketCount(prevCount => prevCount + 1);
   };
 
   const handleDecrement = () => {
-    setTicketCount(prevCount => Math.max(prevCount - 1, 1)); 
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
-    setIsModalOpen(true); 
-  };
-
-  const handleConfirm = () => {
-    setIsModalOpen(false); 
-    navigate('/comprobante');
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false); 
+    setTicketCount(prevCount => Math.max(prevCount - 1, 1));
   };
 
   const totalAmount = ticketCount * ticketPrice;
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleConfirm = () => {
+    setIsModalOpen(false);
+
+    navigate('/comprobante', {
+      state: {
+        nombre,
+        correo,
+        monto: totalAmount, 
+        motivo,
+      },
+    });
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className='page'>
@@ -50,9 +60,10 @@ const FormPago = () => {
         <div className="imagen-form"></div>
         <div className="form-container">
           <h2 className="form-title">
-            Formulario de Pago
+          Formulario de Pago<br/>
+            Tour para {destinationTitle}
           </h2>
-
+          
           <div className="payment-methods">
             <h3 className="payment-title">Métodos de pago</h3>
             <div>
@@ -67,12 +78,12 @@ const FormPago = () => {
                 className="payment-icon"
               />
               <img
-                src= {qr}
+                src={qr}
                 alt="QR Code"
                 className="payment-icon"
               />
               <img
-                src= {paypal}
+                src={paypal}
                 alt="PayPal"
                 className="payment-icon"
               />
@@ -85,18 +96,25 @@ const FormPago = () => {
               type="text"
               placeholder="Ej. Rodolfo Adrián"
               className="form-input"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              required 
             />
             <label className="form-label">Correo electrónico</label>
             <input
               type="email"
               placeholder="Ej. rodolfo.rivera88@gmail.com"
               className="form-input"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)} 
+              required 
             />
             <label className="form-label">Número de la tarjeta</label>
             <input
               type="text"
               placeholder="XXXX XXXX XXXX XXXX"
               className="form-input"
+              required 
             />
             <div className="form-row">
               <div className="form-group">
@@ -105,6 +123,7 @@ const FormPago = () => {
                   type="text"
                   placeholder="Ej. 123"
                   className="form-input redux-input"
+                  required 
                 />
               </div>
               <div className="form-group">
@@ -113,6 +132,7 @@ const FormPago = () => {
                   type="text"
                   placeholder="MM/YYYY"
                   className="form-input redux-input"
+                  required 
                 />
               </div>
             </div>

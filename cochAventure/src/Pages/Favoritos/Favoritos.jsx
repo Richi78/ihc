@@ -1,7 +1,7 @@
 import CardHome from "../../Components/CardHome/CardHome";
 import Footer from "../../Components/Footer/Footer";
 
-const Home = () => {
+const Favoritos = () => {
   const destinos = [
     {
       title: "Pairumani",
@@ -43,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Favoritos;

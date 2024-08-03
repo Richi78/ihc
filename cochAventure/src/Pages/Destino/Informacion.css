@@ -15,12 +15,15 @@
   flex-direction: column;
   justify-content: center;
 }
-.texto-izquierda h1{
+
+.texto-izquierda h1 {
   font-size: 40px;
 }
-.texto-izquierda p{
+
+.texto-izquierda p {
   font-size: 18px;
 }
+
 .imagen-derecha {
   width: 60vw;
   padding: 2rem 10rem;
@@ -41,6 +44,15 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 11px;
+  width: fit-content;
+}
+
+.favo-container:hover {
+  background-color: #febd59;
+  transition: 0.4s;
 }
 
 .favo-icon {

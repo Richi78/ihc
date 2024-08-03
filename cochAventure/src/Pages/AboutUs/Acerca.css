@@ -1,0 +1,50 @@
+/* Contenedor principal para la página de "Acerca" */
+.container-acerca {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor para el contenido de las secciones */
+  .acerca-content {
+    margin: 50px auto; /* Ajusta el margen superior e inferior */
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9; /* Color de fondo más neutro */
+    text-align: left;
+  }
+  
+  /* Estilo del título de cada sección */
+  .acerca-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de cada sección individual */
+  .section-acerca {
+    margin-bottom: 30px; /* Espacio entre secciones */
+  }
+  
+  /* Estilo de los encabezados de las secciones */
+  .section-acerca h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo del texto en cada sección */
+  .section-acerca p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Estilo del footer */
+  .footer-acerca  {
+    margin-top: auto;
+   
+  }
+
+  
