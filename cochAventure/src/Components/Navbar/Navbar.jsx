@@ -52,6 +52,10 @@ const Navbar = () => {
         <button className="btn cerrar-sesion" onClick={handleSesion}>
           {isAuthenticated ? 'Cerrar Sesión' : 'Iniciar Sesión'}
         </button>
+        {!isAuthenticated && (
+          <button className="btn cerrar-sesion" onClick={() => navigate('/autorizacion')}>Registrarse</button>
+
+        )}
       </div>
     </nav>
   );

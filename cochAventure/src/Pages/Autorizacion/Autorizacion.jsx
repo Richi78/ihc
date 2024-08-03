@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from "../../Components/Footer/Footer";
 import './Autorizacion.css';
 import Modal from 'react-modal';
@@ -9,11 +9,23 @@ import { useAuth } from './Autenticacion';
 
 const Autorizacion = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { login } = useAuth();
   const [view, setView] = useState('login'); // Cambia el estado para mostrar login, register, link
   const [showPassword, setShowPassword] = useState(false); // State for password visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [nombre, setNombre] = useState('');
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path.includes('register')) {
+      setView('register');
+    } else if (path.includes('link')) {
+      setView('link');
+    } else {
+      setView('login');
+    }
+  }, [location.pathname]);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -29,7 +41,7 @@ const Autorizacion = () => {
     if (nombre !== "error") {
       login();
       navigate('/home');
-    }else{
+    } else {
       setIsModalOpen(true);
     }
   };
@@ -187,4 +199,3 @@ const Autorizacion = () => {
 };
 
 export default Autorizacion;
-
