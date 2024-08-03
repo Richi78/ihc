@@ -82,4 +82,53 @@
   .piejaja {
     margin-top: auto;
   }
+
+.modal {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal h2 {
+  margin-bottom: 15px; 
+}
+
+.modal p {
+  margin-bottom: 20px; 
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px; 
+}
+
+.modal-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+}
+
+.modal-button:hover {
+  background: #0056b3;
+}
   
