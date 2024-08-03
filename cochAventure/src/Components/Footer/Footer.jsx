@@ -15,10 +15,18 @@ const Footer = () => {
           <h1>CochAventure</h1>
         </div>
         <div className="right-section">
-          <FaFacebook size={30} />
-          <FaInstagram size={30} />
-          <FaTwitter size={30} />
-          <FaWhatsapp size={30} />
+          <a className="footer-icons" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={30} />
+          </a>
+          <a className="footer-icons" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={30} />
+          </a>
+          <a className="footer-icons" href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={30} />
+          </a>
+          <a className="footer-icons" href="https://wa.me/999999999" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp size={30} />
+          </a>
         </div>
       </div>
       <div className="down-section">
