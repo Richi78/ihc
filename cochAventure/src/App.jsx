@@ -23,7 +23,9 @@ import RutaVillaTunari from "./Pages/Rutas/RutaVillaTunari"
 import Favoritos from "./Pages/Favoritos/Favoritos"
 import Comprobante from './Pages/Comprobante/Comprobante'
 import Autorizacion from './Pages/Autorizacion/Autorizacion';
-import Acerca from './Pages/AboutUs/Acerca'; 
+import Acerca from './Pages/AboutUs/Acerca';
+import NoContent from './Pages/NoContent/noContent';
+
 
 
 function App() {
@@ -42,6 +44,7 @@ function App() {
         <Route path="/tarata" element={<DestinoTarata/>} />
         <Route path="/villatunari" element={<DestinoVillaTunari/>} />
         <Route path="/home" element={<Home />} />
+        <Route path="/nocontent" element={<NoContent />} />
         <Route path="/actividadcorani" element={<ActividadCorani />} />
         <Route path="/actividadincallajta" element={<ActividadIncallajta />} />
         <Route path="/actividadpairumani" element={<ActividadPairumani />} />

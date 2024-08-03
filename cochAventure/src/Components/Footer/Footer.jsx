@@ -7,18 +7,26 @@ const Footer = () => {
       <div className="up-section">
         <div className="left-section">
           <h2>Contáctate con nosotros</h2>
-          <p>Teléfono +591 788 123 456</p>
-          <p>Email: infocochaventure@gmail.com</p>
-          <p>Dirección: #3344 Jodan, Ayacucho</p> 
+          <p>Teléfono: <a className="footer-contactos" href="https://wa.me/999999999" target="_blank" rel="noopener noreferrer">+591 788 123 456</a></p>
+          <p>Email: <a className="footer-contactos" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">infocochaventure@gmail.com</a></p>
+          <p>Dirección: <a className="footer-contactos" href="https://maps.app.goo.gl/d8aK25RU1bTTT3yu7" target="_blank" rel="noopener noreferrer">#3344 Jordan, Ayacucho</a></p> 
         </div>
         <div>
-          <h1>CochAventure</h1>
+          <h1 className="footer-name">CochAventure</h1>
         </div>
         <div className="right-section">
-          <FaFacebook size={30} />
-          <FaInstagram size={30} />
-          <FaTwitter size={30} />
-          <FaWhatsapp size={30} />
+          <a className="footer-icons" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={30} />
+          </a>
+          <a className="footer-icons" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={30} />
+          </a>
+          <a className="footer-icons" href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={30} />
+          </a>
+          <a className="footer-icons" href="https://wa.me/999999999" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp size={30} />
+          </a>
         </div>
       </div>
       <div className="down-section">

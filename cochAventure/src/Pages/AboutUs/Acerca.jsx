@@ -1,12 +1,19 @@
 import "./Acerca.css";
 import Footer from "../../Components/Footer/Footer";
+import Personas from '../../assets/personas.png'; 
+import Privacidad from '../../assets/privacidad.png'; 
+import Mision from '../../assets/mision.png'; 
+import Medios from '../../assets/medios.png'; 
 
 const Destino = () => {
   return (
     <div className="page">
       <div className="container-acerca">
         <div className="acerca-content">
+          
           <div className="section-acerca" id="quienes-somos">
+            <h1>Acerca de nosotros</h1>
+            <img src={Personas} alt="Personas" style={{ width: '100px', height: 'auto' }}/>
             <h2 className="acerca-title">¿Quiénes somos?</h2>
             <p>
               En CochaAventure somos una empresa de turismo ubicada en
@@ -18,6 +25,7 @@ const Destino = () => {
           </div>
 
           <div className="section-acerca" id="nuestra-mision">
+            <img src={Mision} alt="Mision" style={{ width: '100px', height: 'auto' }}/>
             <h2 className="acerca-title">Nuestra Misión</h2>
             <p>
               Nuestra misión es proporcionar a nuestros clientes experiencias de
@@ -29,6 +37,7 @@ const Destino = () => {
           </div>
 
           <div className="section-acerca" id="politica-privacidad">
+            <img src={Privacidad} alt="Privacidad" style={{ width: '100px', height: 'auto' }}/>
             <h2 className="acerca-title">Política de Privacidad</h2>
             <p>
               En CochaAventure, nos comprometemos a proteger la privacidad de
@@ -40,6 +49,7 @@ const Destino = () => {
           </div>
 
           <div className="section-acerca" id="aparicion-medios">
+            <img src={Medios} alt="Medios" style={{ width: '100px', height: 'auto' }}/>
             <h2 className="acerca-title">Aparición en Medios</h2>
             <p>
               CochaAventure ha sido destacado en varios medios de comunicación

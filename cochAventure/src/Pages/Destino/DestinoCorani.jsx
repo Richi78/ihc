@@ -33,7 +33,7 @@ const DestinoCorani = () => {
             items: [
                 { icon: timeIcon, text: 'Duración: 1 Día' },
                 { icon: dateIcon, text: 'Fecha salida: 06/08/2024' },
-                { icon: '', text: "Fecha llegada: 06/08/2024" }
+                { icon: '', text: "_____ Fecha llegada: 06/08/2024" }
             ]
         },
         {
@@ -68,7 +68,7 @@ const DestinoCorani = () => {
             image: informacionImg, 
             title: 'Información', 
             description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', 
-            lugar: 'corani' 
+            lugar: 'actividadcorani' 
         },
         { 
             image: rutasImg, 

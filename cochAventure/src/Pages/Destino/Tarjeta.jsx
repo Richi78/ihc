@@ -21,6 +21,22 @@ const Tarjeta = ({ image, title, description, lugar }) => {
       navigate('/'+lugar)
     }
 
+    if (title === "Información" && lugar === "actividadcorani"){
+      navigate('/nocontent')
+    }
+    if (title === "Información" && lugar === "actividadincallajta"){
+      navigate('/nocontent')
+    }
+    if (title === "Información" && lugar === "actividadpairumani"){
+      navigate('/nocontent')
+    }
+    if (title === "Información" && lugar === "actividadtarata"){
+      navigate('/nocontent')
+    }
+    if (title === "Información" && lugar === "actividadvillatunari"){
+      navigate('/nocontent')
+    }
+
     if (title === "Rutas" && lugar === "actividadcorani"){
       navigate('/rutacorani')
     }
