@@ -80,7 +80,7 @@ const FormReserva = () => {
             <label className="form-label">Nombre Completo</label>
             <input
               type="text"
-              placeholder="Ej. Rodolfo Adrián"
+              placeholder="Ej. Rodolfo Adrián Rivera Quiñoz"
               className="form-input"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}

@@ -33,7 +33,7 @@ const DestinoCorani = () => {
             items: [
                 { icon: timeIcon, text: 'Duración: 1 Día' },
                 { icon: dateIcon, text: 'Fecha salida: 06/08/2024' },
-                { icon: '', text: "Fecha llegada: 06/08/2024" }
+                { icon: '', text: "_____ Fecha llegada: 06/08/2024" }
             ]
         },
         {

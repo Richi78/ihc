@@ -10,7 +10,9 @@ const Destino = () => {
     <div className="page">
       <div className="container-acerca">
         <div className="acerca-content">
+          
           <div className="section-acerca" id="quienes-somos">
+            <h1>Acerca de nosotros</h1>
             <img src={Personas} alt="Personas" style={{ width: '100px', height: 'auto' }}/>
             <h2 className="acerca-title">¿Quiénes somos?</h2>
             <p>

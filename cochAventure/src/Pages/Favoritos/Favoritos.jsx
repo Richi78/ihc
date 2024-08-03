@@ -17,9 +17,10 @@ const Favoritos = () => {
   return (
     <div className="page">
       <div className="maincito">
-        <section className="destinos">
+        <section className="destinos destinos-message">
           <div>
-            <h2>Vuelve a ver tus lugares favoritos</h2>
+            <h1>Destinos de Viaje Favoritos</h1>
+            <p>¡Todos los destinos turísticos que marcaste como favoritos en un solo lugar!</p>
           </div>
 
           <div className="paquetes">
