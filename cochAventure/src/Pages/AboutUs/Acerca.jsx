@@ -57,7 +57,9 @@ const Destino = () => {
               CochaAventure ha sido destacado en varios medios de comunicación
               por la calidad y exclusividad de nuestros tours. A lo largo de los
               años, hemos recibido reconocimiento por nuestra dedicación al
-              turismo sostenible y la promoción de la cultura local.
+              turismo sostenible y la promoción de la cultura local. Si deseas ver nuestra presencia en los medios, 
+              en nuestra sección de contacto 
+              encontrarás iconos que te redijirán a nuestras redes sociales.
             </p>
           </div>
         </div>
