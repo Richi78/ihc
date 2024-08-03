@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px; /* Cambiar esta vaina hace que el footer se vaya mas abajo o arriba*/
+    height: 80vh;
     background-color: #f8f9fa;
   }
   
@@ -79,4 +79,7 @@
     text-align: left;
   }
 
+  .piejaja {
+    margin-top: auto;
+  }
   

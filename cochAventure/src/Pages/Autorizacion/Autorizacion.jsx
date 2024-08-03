@@ -11,7 +11,7 @@ const Autorizacion = () => {
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-
+// nombreuser*email*contra
   const renderView = () => {
     switch(view) {
       case 'register':
@@ -85,12 +85,14 @@ const Autorizacion = () => {
   };
 
   return (
-    <div>
-        <div className="auth-wrapper">
-            {renderView()}
-        </div>
+    <div className="page">
+      <div className="auth-wrapper">
+        {renderView()}
+      </div>
+      <div className="piejaja">
         <Footer/>
-    </div>
+      </div>
+    </div>  
   );
 };
 
