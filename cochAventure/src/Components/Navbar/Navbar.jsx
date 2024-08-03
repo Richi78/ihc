@@ -39,7 +39,7 @@ const Navbar = () => {
         <label className={`para-hover ${isActive('/favoritos')}`} onClick={handleFavoritos}>Favoritos</label>
         <label className={`para-hover ${isActive('/acerca')}`} onClick={handleAcerca}>Acerca de nosotros</label>
         <label className='para-hover' onClick={handleContacto}>Contáctenos</label>
-        <button className="btn cerrar-sesion">alsfkksf Sesión</button>
+        <button className="btn cerrar-sesion">Cerrar Sesión</button>
       </div>
     </nav>
   )
