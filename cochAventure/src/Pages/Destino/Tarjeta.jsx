@@ -12,7 +12,7 @@ const Tarjeta = ({ image, title, description, lugar }) => {
       navigate('/incallajta/'+lugar)
     }
     if (title === "Itinerario" && lugar === "actividadpairumani"){
-      navigate('/paurimani/'+lugar)
+      navigate('/pairumani/'+lugar)
     }
     if (title === "Itinerario" && lugar === "actividadtarata"){
       navigate('/tarata/'+lugar)
