@@ -13,6 +13,7 @@ import dateIcon from '../../assets/date2.png';
 import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 
 const DestinoIncallajta = () => {
     const ticketPrice = 200;
@@ -44,11 +45,11 @@ const DestinoIncallajta = () => {
               text: '200 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+                onClick:() => {navigate('/incallajta/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice,destinationTitle } });
+                  onClick: () => {navigate('/incallajta/formr', { state: { ticketPrice,destinationTitle } });
                   },
                 },
               ]
@@ -63,6 +64,7 @@ const DestinoIncallajta = () => {
       ];
       return (
         <div className='page'>
+          <MigasDePan/>
         <div className="destino-container">
            <Informacion
             title="Incallajta"

@@ -7,6 +7,7 @@ import visa from "../../assets/visa.png";
 import qr from "../../assets/qr.png";
 import master from "../../assets/master.png";
 import paypal from "../../assets/paypal.png";
+import MigasDePan from '../../Components/Navigation/MigasDePan';
 
 Modal.setAppElement('#root');
 
@@ -40,7 +41,7 @@ const FormPago = () => {
   const handleConfirm = () => {
     setIsModalOpen(false);
 
-    navigate('/comprobante', {
+    navigate(`/${destinationTitle}/formp/comprobante`, {
       state: {
         nombre,
         correo,
@@ -56,6 +57,7 @@ const FormPago = () => {
 
   return (
     <div className='page'>
+      <MigasDePan />
       <div className="container">
         <div className="imagen-form"></div>
         <div className="form-container">

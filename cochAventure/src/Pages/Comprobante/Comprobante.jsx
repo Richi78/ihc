@@ -4,6 +4,8 @@ import Modal from 'react-modal'; // Importa Modal
 import Footer from '../../Components/Footer/Footer';
 import './Comprobante.css';
 
+import MigasDePan from '../../Components/Navigation/MigasDePan'
+
 // Asegúrate de que el elemento raíz esté configurado para react-modal
 Modal.setAppElement('#root');
 
@@ -41,6 +43,7 @@ const Comprobante = () => {
 
   return (
     <div className="page">
+      <MigasDePan/>
       <div className="comprobante-container">
         <div className="comprobante-content">
           <h1 className="comprobante-title">Comprobante de Pago</h1>

@@ -1,10 +1,12 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toTarata from "../../assets/toTarata.png";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const RutaTarata = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Tarata</h1>

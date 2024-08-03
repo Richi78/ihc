@@ -1,9 +1,11 @@
 import Footer from "../../Components/Footer/Footer";
 import "./Actividades.css";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const ActividadTarata = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="bg-background p-6">
         <div className="titulo-itinerario">
           <h1 className="text-2xl font-bold subrayado">ITINERARIO - TARATA</h1>

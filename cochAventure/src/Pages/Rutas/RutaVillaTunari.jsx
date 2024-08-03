@@ -1,10 +1,12 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toVillaTunari from "../../assets/toVillaTunari.png";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const RutaVillaTunari = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Villa Tunari</h1>

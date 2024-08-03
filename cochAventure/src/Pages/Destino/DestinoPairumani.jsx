@@ -13,7 +13,7 @@ import dateIcon from '../../assets/date2.png';
 import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
-
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 const DestinoPairumani = () => {
   const ticketPrice = 150; 
 
@@ -45,11 +45,11 @@ const DestinoPairumani = () => {
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+                onClick:() => {navigate('/pairumani/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
+                  onClick: () => {navigate('/pairumani/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]
@@ -64,6 +64,7 @@ const DestinoPairumani = () => {
       ];
       return (
         <div className='page'>
+          <MigasDePan/>
         <div className="destino-container">
            <Informacion
             title="Parque Ecoturistico Pairumani"

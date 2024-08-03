@@ -4,10 +4,12 @@ import Personas from '../../assets/personas.png';
 import Privacidad from '../../assets/privacidad.png'; 
 import Mision from '../../assets/mision.png'; 
 import Medios from '../../assets/medios.png'; 
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const Destino = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="container-acerca">
         <div className="acerca-content">
           

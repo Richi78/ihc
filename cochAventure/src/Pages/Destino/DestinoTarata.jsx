@@ -13,6 +13,8 @@ import dateIcon from '../../assets/date2.png';
 import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
+
 const DestinoTarata = () => {
 
     const ticketPrice = 150; 
@@ -44,11 +46,11 @@ const DestinoTarata = () => {
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+                onClick:() => {navigate('/tarata/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
+                  onClick: () => {navigate('/tarata/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]
@@ -63,6 +65,7 @@ const DestinoTarata = () => {
       ];
       return (
         <div className='page'>
+          <MigasDePan/>
         <div className="destino-container">
            <Informacion
             title="Tarata"

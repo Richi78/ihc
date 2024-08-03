@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; 
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from './Autenticacion';
-
+import MigasDePan from '../../Components/Navigation/MigasDePan';
 const Autorizacion = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -176,6 +176,7 @@ const Autorizacion = () => {
 
   return (
     <div className="page">
+      <MigasDePan />
       <div className="auth-wrapper">
         {renderView()}
       </div>

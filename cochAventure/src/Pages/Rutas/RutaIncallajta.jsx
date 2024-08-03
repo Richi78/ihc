@@ -1,10 +1,12 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toIncallajta from "../../assets/toIncallajta.png";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const RutaIncallajta = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Incallajta</h1>

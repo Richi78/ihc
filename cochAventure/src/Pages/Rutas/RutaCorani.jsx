@@ -1,10 +1,11 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toCorani from "../../assets/toCorani.png";
-
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 const RutaCorani = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Corani</h1>
