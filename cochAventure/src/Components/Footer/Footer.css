@@ -11,6 +11,10 @@
     color: #191919;
 }
 
+.left-section p{
+    padding: 12px 0 0 5px;
+}
+
 .up-section .left-section {
     padding-left: 3rem;
 }

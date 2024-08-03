@@ -48,12 +48,13 @@
     max-width: 90%;
     width: 100%;
     min-height: calc(100vh - 13rem);
+    margin: 20px 0 30px 5%;
 }
 
 .form-container {
     width: 100%;
     max-width: 600px;
-    padding: 30px;
+    padding: 0 30px;
 }
 
 .form-title {
