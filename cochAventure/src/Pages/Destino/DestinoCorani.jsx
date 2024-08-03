@@ -68,7 +68,7 @@ const DestinoCorani = () => {
             image: informacionImg, 
             title: 'Información', 
             description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', 
-            lugar: 'corani' 
+            lugar: 'actividadcorani' 
         },
         { 
             image: rutasImg, 

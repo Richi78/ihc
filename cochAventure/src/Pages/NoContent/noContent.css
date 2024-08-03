@@ -1,0 +1,21 @@
+.noContent-title{
+    text-align: center;
+    padding: 5rem 0 15rem 0;
+}
+
+.noContent-title h2{
+    margin-top: 1rem;
+}
+
+.noContent-title p{
+    margin-top: 10px;
+}
+
+.noContent-title label{
+    color: #febd59;
+}
+
+.noContent-title label:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
