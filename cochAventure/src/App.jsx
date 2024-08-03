@@ -25,44 +25,47 @@ import Comprobante from './Pages/Comprobante/Comprobante'
 import Autorizacion from './Pages/Autorizacion/Autorizacion';
 import Acerca from './Pages/AboutUs/Acerca';
 import NoContent from './Pages/NoContent/noContent';
-
+import { AuthProvider } from "./Pages/Autorizacion/Autenticacion"
 
 
 function App() {
 
   return (
-    <BrowserRouter>
-      {/* aqui viene el navbar */}
-      <Navbar/>
-      <Routes>
-        {/* aqui las rutas */}
-        <Route index element={<Home />} />
-        <Route path="/rutacorani" element={<RutaCorani/>} />
-        <Route path="/corani" element={<DestinoCorani/>} />
-        <Route path="/incallajta" element={<DestinoIncallajta/>} />
-        <Route path="/pairumani" element={<DestinoPairumani/>} />
-        <Route path="/tarata" element={<DestinoTarata/>} />
-        <Route path="/villatunari" element={<DestinoVillaTunari/>} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/nocontent" element={<NoContent />} />
-        <Route path="/actividadcorani" element={<ActividadCorani />} />
-        <Route path="/actividadincallajta" element={<ActividadIncallajta />} />
-        <Route path="/actividadpairumani" element={<ActividadPairumani />} />
-        <Route path="/actividadtarata" element={<ActividadTarata />} />
-        <Route path="/actividadvillatunari" element={<ActividadVillaTunari />} />
-        <Route path="/rutacorani" element={<RutaCorani />} />
-        <Route path="/rutaincallajta" element={<RutaIncallajta />} />
-        <Route path="/rutapairumani" element={<RutaPairumani />} />
-        <Route path="/rutatarata" element={<RutaTarata />} />
-        <Route path="/rutavillatunari" element={<RutaVillaTunari />} />
-        <Route path="/formp" element={<FormPago />} />
-        <Route path="/Formr" element={<FormReserva />} />
-        <Route path="/favoritos" element={<Favoritos />} />
-        <Route path="/comprobante" element={<Comprobante />} />
-        <Route path="/autorizacion" element={<Autorizacion/>}/>
-        <Route path="/acerca" element={<Acerca />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+<BrowserRouter>
+          {/* aqui viene el navbar */}
+          <Navbar/>
+          <Routes>
+            {/* aqui las rutas */}
+            <Route index element={<Home />} />
+            <Route path="/rutacorani" element={<RutaCorani/>} />
+            <Route path="/corani" element={<DestinoCorani/>} />
+            <Route path="/incallajta" element={<DestinoIncallajta/>} />
+            <Route path="/pairumani" element={<DestinoPairumani/>} />
+            <Route path="/tarata" element={<DestinoTarata/>} />
+            <Route path="/villatunari" element={<DestinoVillaTunari/>} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/nocontent" element={<NoContent />} />
+            <Route path="/actividadcorani" element={<ActividadCorani />} />
+            <Route path="/actividadincallajta" element={<ActividadIncallajta />} />
+            <Route path="/actividadpairumani" element={<ActividadPairumani />} />
+            <Route path="/actividadtarata" element={<ActividadTarata />} />
+            <Route path="/actividadvillatunari" element={<ActividadVillaTunari />} />
+            <Route path="/rutacorani" element={<RutaCorani />} />
+            <Route path="/rutaincallajta" element={<RutaIncallajta />} />
+            <Route path="/rutapairumani" element={<RutaPairumani />} />
+            <Route path="/rutatarata" element={<RutaTarata />} />
+            <Route path="/rutavillatunari" element={<RutaVillaTunari />} />
+            <Route path="/formp" element={<FormPago />} />
+            <Route path="/Formr" element={<FormReserva />} />
+            <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="/comprobante" element={<Comprobante />} />
+            <Route path="/autorizacion" element={<Autorizacion/>}/>
+            <Route path="/acerca" element={<Acerca />} />
+          </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+      
   )
 }
 

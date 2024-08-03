@@ -5,9 +5,11 @@ import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; 
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from './Autenticacion';
 
 const Autorizacion = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [view, setView] = useState('login'); // Cambia el estado para mostrar login, register, link
   const [showPassword, setShowPassword] = useState(false); // State for password visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,6 +27,7 @@ const Autorizacion = () => {
     event.preventDefault();
     setIsModalOpen(true);
     if (nombre !== "error") {
+      login();
       navigate('/home');
     }else{
       setIsModalOpen(true);
