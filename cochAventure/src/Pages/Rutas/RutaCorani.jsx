@@ -16,7 +16,6 @@ const RutaCorani = () => {
           <div className="target-right">
             <h1>Ruta establecida</h1>
             <br />
-
             <p>
               Sale de la ciudad de Cochabamba tomando la carretera hacia el
               este, en dirección a Sacaba. Sigue la carretera principal (Ruta 4)
@@ -40,10 +39,10 @@ const RutaCorani = () => {
             <h2>Segunda parada - Mirador de la Cumbre</h2>
             <br />
             <p>
-              Hermosa vista de la comunidad de Waka, se puede ver hasta lo mas
+              Hermosa vista de la comunidad de Waka, se puede ver hasta lo más
               lejos de las montañas aledañas, la vista es increíble, solo
               escuchas a los camiones americanos bajando con su freno de motor
-              una melodía de sonido. Recomiendo ir en época de enero - marzo, el
+              una melodía de sonido. Se recomienda ir en época de enero - marzo, el
               viento es muy fuerte en invierno.
             </p>
           </div>

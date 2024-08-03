@@ -6,7 +6,7 @@ const ActividadIncallajta = () => {
     <div className="page">
       <div className="bg-background p-6">
         <div className="titulo-itinerario">
-          <h1 className="text-2xl font-bold subrayado">ITINERARIO</h1>
+          <h1 className="text-2xl font-bold subrayado">ITINERARIO - INCALLAJTA</h1>
         </div>
 
         <div className="act">
@@ -44,7 +44,7 @@ const ActividadIncallajta = () => {
               <p className="act3">
                 La ciudadela ofrece una experiencia auténtica, donde los
                 visitantes pueden sumergirse en la vida cotidiana de la
-                comunidad local. Los vendedores suelen ofrecer productos frescos
+                comunidad local. Los vendedores locales suelen ofrecer productos frescos
                 y tradicionales, lo que permite a los visitantes experimentar la
                 gastronomía y los productos típicos de la región.
               </p>

@@ -6,7 +6,7 @@ const ActividadPairumani = () => {
     <div className='page'>
     <div className="bg-background p-6">
         <div className="titulo-itinerario">
-            <h1 className="text-2xl font-bold subrayado">ITINERARIO</h1>
+            <h1 className="text-2xl font-bold subrayado">ITINERARIO - PAIRUMANI</h1>
         </div>
 
         <div className="act">
@@ -35,7 +35,7 @@ const ActividadPairumani = () => {
                     <p className="act3">El Parque Ecoturistico Pairumani ofrece una experiencia
                         auténtica,
                         donde los visitantes pueden sumergirse en la vida cotidiana de la
-                        comunidad local. Los vendedores suelen ofrecer productos frescos y tradicionales, lo que permite
+                        comunidad local. Los vendedores locales suelen ofrecer productos frescos y tradicionales, lo que permite
                         a los visitantes
                         experimentar la gastronomía y los productos típicos de la región.</p>
                     <p className="mt-2"><strong>Duración:</strong> 1 hora</p>
@@ -73,7 +73,7 @@ const ActividadPairumani = () => {
                         experiencia
                         auténtica,
                         donde los visitantes pueden sumergirse en la vida cotidiana de la
-                        comunidad local. Los vendedores suelen ofrecer productos frescos y tradicionales, lo que permite
+                        comunidad local. Los vendedores locales suelen ofrecer productos frescos y tradicionales, lo que permite
                         a los visitantes
                         experimentar la gastronomía y los productos típicos de la región.</p>
                     <p className="mt-2"><strong>Duración:</strong> 1 hora</p>
