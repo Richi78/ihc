@@ -13,7 +13,7 @@ const Destino = () => {
     {
       title: 'INCLUYE',
       items: [
-        { icon: '🛏️', text: 'Transporte ida y vuelta: Bus.' },
+        { icon: '🛏️', text: 'Servicio de transporte de ida y vuelta en autobús.' },
         { icon: '🍽️', text: '.' },
         { icon: '🚌', text: '' }
       ]
@@ -43,7 +43,7 @@ const Destino = () => {
   const tarjetasItems = [
     { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.' },
     { image: informacionImg, title: 'Informacion', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.' },
-    { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.' },
+    { image: rutasImg, title: 'Rutas', description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Corani.' },
   ];
 
   return (

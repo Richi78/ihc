@@ -23,8 +23,8 @@ const DestinoVillaTunari = () => {
     {
       title: "INCLUYE",
       items: [
-        { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-        { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+        { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+        { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
         { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
       ]
     },
@@ -75,7 +75,7 @@ const DestinoVillaTunari = () => {
       image: rutasImg,
       title: "Rutas",
       description:
-        "Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.",
+        "Aquí encontrarás la ruta que realizará el transporte para llegar a Villa Tunari.",
         lugar:'actividadvillatunari'
     },
   ];

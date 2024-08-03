@@ -16,10 +16,10 @@ const RutaTarata = () => {
           <div className="target-right">
             <h1>Ruta establecida</h1>
             <br />
-            Tarata es un destino histórico y culturalmente rico que ofrece una
+            <p>Tarata es un destino histórico y culturalmente rico que ofrece una
             experiencia auténtica de la vida en una pequeña ciudad boliviana. El
             viaje es corto y la ruta es relativamente fácil, ya sea en auto o en
-            transporte público.
+            transporte público.</p>
             <br />
             <h2>Primera parada - Laguna La Angostura Cochabamba</h2>
             <br />

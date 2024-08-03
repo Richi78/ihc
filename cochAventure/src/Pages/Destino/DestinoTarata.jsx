@@ -23,8 +23,8 @@ const DestinoTarata = () => {
         {
           title: 'INCLUYE',
           items: [
-            { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-            { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+            { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+            { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
             { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
           ]
         },
@@ -59,7 +59,7 @@ const DestinoTarata = () => {
       const tarjetasItems = [
         { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadtarata' },
         { image: informacionImg, title: 'Información', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadtarata' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'actividadtarata' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Tarata.', lugar:'actividadtarata' },
       ];
       return (
         <div className='page'>
