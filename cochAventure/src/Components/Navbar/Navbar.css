@@ -12,46 +12,51 @@
     width: 100vw;
 }
 
+.navBar h2 {
+    margin-left: 10px;
+}
+
 .logo {
+    
+    /* background-color: red; */
     align-items: center;
     padding-left: 1rem;
 }
 
 .nav-options {
+    width: auto;
     display: flex;
-    gap: 1rem; /* Reducido para ajustar el tamaño al texto */
+    gap: 2rem;
     padding-right: 2rem;
+    justify-content: right;
     align-items: center;
 }
 
-.para-hover {
-    padding: 0.5rem 1rem; /* Ajuste para que el tamaño se acomode al texto */
-    border-bottom: 2px solid transparent;
+.para-hover:hover{
     cursor: pointer;
-    display: flex;
-    align-items: center; /* Alinea verticalmente el texto */
 }
 
-.para-hover:hover {
-    border-bottom: 5px solid #191919;
-    color: white;
-}
 
 .cerrar-sesion {
     background-color: white;
-    padding: 0.5rem 1rem; /* Ajuste del tamaño del botón */
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center; /* Alinea verticalmente el texto */
 }
 
-.cerrar-sesion:hover {
+.cerrar-sesion:hover{
     background-color: #191919;
     color: white;
     transition: 0.4s;
+    cursor: pointer;
 }
 
-.btn {
-    font-size: 1rem; /* Asegura un tamaño de texto consistente */
+.para-hover {
+  height: 65px;
+  cursor: pointer;
+  padding: 0 1rem;
+  align-content: center;
+  border-bottom: 2px solid transparent;
+}
+
+.para-hover.active {
+  border-bottom: 5px solid #191919;
+  color: white;
 }
