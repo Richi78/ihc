@@ -21,13 +21,9 @@ import RutaPairumani from "./Pages/Rutas/RutaPairumani"
 import RutaTarata from "./Pages/Rutas/RutaTarata"
 import RutaVillaTunari from "./Pages/Rutas/RutaVillaTunari"
 import Favoritos from "./Pages/Favoritos/Favoritos"
-<<<<<<< HEAD
 import Comprobante from './Pages/Comprobante/Comprobante'
 import Autorizacion from './Pages/Autorizacion/Autorizacion';
-=======
-import Comprobante from './Pages/Comprobante/Comprobante'; 
 import Acerca from './Pages/AboutUs/Acerca'; 
->>>>>>> 68d1d08b2f7d151c5c494a549df990c29fccbe2d
 
 
 function App() {
@@ -60,11 +56,8 @@ function App() {
         <Route path="/Formr" element={<FormReserva />} />
         <Route path="/favoritos" element={<Favoritos />} />
         <Route path="/comprobante" element={<Comprobante />} />
-<<<<<<< HEAD
         <Route path="/autorizacion" element={<Autorizacion/>}/>
-=======
         <Route path="/acerca" element={<Acerca />} />
->>>>>>> 68d1d08b2f7d151c5c494a549df990c29fccbe2d
       </Routes>
     </BrowserRouter>
   )
