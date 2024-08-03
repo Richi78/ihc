@@ -27,21 +27,18 @@
     align-items: center;
     width: 50vw;
     min-width: calc(100vh - 13rem);
-    padding: 2rem 0rem;
+    padding: 2rem 0 0 7rem;
 }
 
-.target-left img {
+.target-left a img {
     
-    width: 80%;
+    width: 100%;
     /* padding: 2rem 2rem; */
 }
 
 .target-right {
     width: 50vw;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 15rem;
-    padding-left: 2rem;
+    padding: 2rem 9rem 0 2rem;
 }
 
 .target-right h1{

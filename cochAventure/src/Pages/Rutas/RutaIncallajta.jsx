@@ -11,7 +11,7 @@ const RutaIncallajta = () => {
         </div>
         <div className="target-routes">
           <div className="target-left">
-            <img src={toIncallajta} alt="" />
+            <a href="https://maps.app.goo.gl/3jzB3G3vCN4gEgHt9" target="_blank" rel="noopener noreferrer"><img src={toCorani} alt="" /></a>
           </div>
           <div className="target-right">
             <h1>Ruta establecida</h1>

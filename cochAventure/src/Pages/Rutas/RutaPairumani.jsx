@@ -11,7 +11,7 @@ const RutaPairumani = () => {
         </div>
         <div className="target-routes">
           <div className="target-left">
-            <img src={toPairumani} alt="" />
+            <a href="https://maps.app.goo.gl/QEUjrXMEWoAUR9WS9" target="_blank" rel="noopener noreferrer"><img src={toPairumani} alt="" /></a>
           </div>
           <div className="target-right">
             <h1>Ruta establecida</h1>

@@ -12,16 +12,14 @@
 }
 
 .up-section .left-section {
-    /* background-color: red; */
-    padding-left: 1rem;
+    padding-left: 3rem;
 }
 
 .up-section .right-section {
-    /* background-color: red; */
     display: flex;
     gap: 1rem;
     padding-top: 4rem;
-    padding-right: 1rem;
+    padding-right: 3rem;
 }
 
 .down-section {
@@ -34,4 +32,18 @@
 
 .footer-icons{
     color: #191919;
+}
+
+.footer-contactos{
+    color: #191919;
+}
+
+.footer-contactos:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.footer-name{
+    padding-top: 30px;
 }
