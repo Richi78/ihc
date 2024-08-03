@@ -3,7 +3,7 @@ import Footer from "../../Components/Footer/Footer";
 import './Autorizacion.css';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; 
+import { faEye, faEyeSlash, faPersonHarassing } from '@fortawesome/free-solid-svg-icons'; 
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Autorizacion = () => {
@@ -11,7 +11,10 @@ const Autorizacion = () => {
   const [view, setView] = useState('login'); // Cambia el estado para mostrar login, register, link
   const [showPassword, setShowPassword] = useState(false); // State for password visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpenPw, setIsModalOpenPw] = useState(false);
   const [nombre, setNombre] = useState('');
+  const [password1, setPassword1] = useState('');
+  const [password2, setPassword2] = useState('');
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -21,9 +24,16 @@ const Autorizacion = () => {
     event.preventDefault();
     setIsModalOpen(true);
   };
+  const handleSubmitRegistro = (event) => {
+    event.preventDefault();
+    if (password1 == password2) {
+      setIsModalOpen(true)
+    }else{
+      setIsModalOpenPw(true);
+    }
+  };
   const handleSubmitSesion = (event) => {
     event.preventDefault();
-    setIsModalOpen(true);
     if (nombre !== "error") {
       navigate('/home');
     }else{
@@ -31,13 +41,16 @@ const Autorizacion = () => {
     }
   };
 
+  const handleCancelPw = () => {
+    setIsModalOpenPw(false);
+  };
   const handleCancel = () => {
     setIsModalOpen(false);
   };
   const handleConfirmSesion = () => {
     setIsModalOpen(false);
     if (nombre !== "error") {
-      navigate('/home'); // Reemplaza '/otraPagina' con la ruta deseada
+      navigate('/home');
     }
   };
   const handleConfirmToLogin = () => {
@@ -51,7 +64,7 @@ const Autorizacion = () => {
         return (
           <div className="auth-container">
             <h2 className="centrado">Regístrate</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmitRegistro}>
               <label className="campo-dato">Nombre de usuario</label>
               <input type="text" placeholder="alberto123" className="input-field" required/>
               <label className="campo-dato">Correo Electrónico</label>
@@ -61,6 +74,8 @@ const Autorizacion = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Contraseña"
+                  value={password1}
+                  onChange={(e) => setPassword1(e.target.value)}
                   className="input-field-pw"
                   required
                 />
@@ -73,6 +88,8 @@ const Autorizacion = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Contraseña"
+                  value={password2}
+                  onChange={(e) => setPassword2(e.target.value)}
                   className="input-field-pw"
                   required
                 />
@@ -93,6 +110,19 @@ const Autorizacion = () => {
               <p>Ingrese a la pagina con los datos registrados</p>
               <div className="modal-buttons">
                 <button onClick={handleConfirmToLogin} className="modal-button">Aceptar</button>
+              </div>
+            </Modal>
+            <Modal
+              isOpen={isModalOpenPw}
+              onRequestClose={handleCancelPw}
+              contentLabel="Las contraseñas no son iguales"
+              className="modal"
+              overlayClassName="modal-overlay"
+            >
+              <h2>Las contraseñas no son iguales</h2>
+              <p>Asegurese de que las contraseñas son iguales</p>
+              <div className="modal-buttons">
+                <button onClick={handleCancelPw} className="modal-button">Aceptar</button>
               </div>
             </Modal>
             <p>Ya tienes una cuenta? <span onClick={() => setView('login')} className="link-text">Inicia Sesión</span></p>
