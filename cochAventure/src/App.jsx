@@ -45,7 +45,6 @@ function App() {
             <Route path="/tarata" element={<DestinoTarata/>} />
             <Route path="/villatunari" element={<DestinoVillaTunari/>} />
             <Route path="/home" element={<Home />} />
-            <Route path="/nocontent" element={<NoContent />} />
             <Route path="/actividadcorani" element={<ActividadCorani />} />
             <Route path="/actividadincallajta" element={<ActividadIncallajta />} />
             <Route path="/actividadpairumani" element={<ActividadPairumani />} />
@@ -62,6 +61,7 @@ function App() {
             <Route path="/comprobante" element={<Comprobante />} />
             <Route path="/autorizacion" element={<Autorizacion/>}/>
             <Route path="/acerca" element={<Acerca />} />
+            <Route path="/*" element={<NoContent />} />
           </Routes>
       </BrowserRouter>
     </AuthProvider>
