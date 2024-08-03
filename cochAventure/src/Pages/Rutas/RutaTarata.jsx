@@ -21,7 +21,9 @@ const RutaTarata = () => {
             viaje es corto y la ruta es relativamente fácil, ya sea en auto o en
             transporte público.</p>
             <br />
+            <a href="https://maps.app.goo.gl/5E5zvE6kocNV18ns9" target="_blank" rel="noopener noreferrer">
             <h2>Primera parada - Laguna La Angostura Cochabamba</h2>
+            </a>
             <br />
             <p>
               Angostura ofrece una vista de un paisaje que persiste a lo largo
@@ -31,7 +33,9 @@ const RutaTarata = () => {
               lugar frio.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/XmTZ7CLNWrvU9SYv8" target="_blank" rel="noopener noreferrer">
             <h2>Segunda parada - Restaurant 3 hermanas</h2>
+            </a>
             <br />
             <p>
               Es el destino perfecto para los amantes del pescado fresco y los

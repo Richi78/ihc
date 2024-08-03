@@ -24,7 +24,9 @@ const RutaCorani = () => {
               montañas y el paisaje andino.
             </p>
             <br />
-            <h2>Primera parada - Laguna San Isidro</h2>
+            <a href="https://maps.app.goo.gl/Xw7PcJuuQxGqkJ7F8" target="_blank" rel="noopener noreferrer">
+              <h2>Primera parada - Laguna San Isidro</h2>
+            </a>
             <br />
             <p>
               Es un bonito lugar, sus aguas son tranquilas y se pueden encontrar
@@ -36,7 +38,10 @@ const RutaCorani = () => {
               lugar es considerable.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/u28tWk7syjiXrcSy7" target="_blank" rel="noopener noreferrer">
             <h2>Segunda parada - Mirador de la Cumbre</h2>
+
+            </a>
             <br />
             <p>
               Hermosa vista de la comunidad de Waka, se puede ver hasta lo más

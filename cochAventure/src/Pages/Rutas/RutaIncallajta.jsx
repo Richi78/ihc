@@ -21,14 +21,19 @@ const RutaIncallajta = () => {
               este, adentrándote en la región andina de Bolivia.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/XNPyNzvJHXPmoZjK7" target="_blank" rel="noopener noreferrer">
+
             <h2>Primera parada - Estación Experimental San Benito</h2>
+            </a>
             <br />
             <p>
             Centro de desarrollo de plantines de manzana y durazno con biotecnología. 
             Desarrollan desde la semilla hasta plantines.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/Xv1Xrv9dA75z7u978" target="_blank" rel="noopener noreferrer">
             <h2>Segunda parada - Los Chucuchucus</h2>
+            </a>
             <br />
             <p>
             Un lugar estratégico para matar el hambre de los viajeros, las señoras 
