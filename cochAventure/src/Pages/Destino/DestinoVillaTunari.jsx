@@ -34,9 +34,9 @@ const DestinoVillaTunari = () => {
     {
       title: 'DETALLES',
       items: [
-        { icon: timeIcon, text: ' Duración: 1 Dia' },
-        { icon: dateIcon, text: 'Fecha salida: 06/08/2024 ' },
-        { icon: '', text: ' Fecha llegada: 06/08/2024' }
+        { icon: timeIcon, text: ' Duración: 2 Dia' },
+        { icon: dateIcon, text: 'Fecha salida: 23/08/2024 ' },
+        { icon: dateIcon, text: ' Fecha llegada: 24/08/2024 '}
       ]
     },
     {

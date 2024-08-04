@@ -22,6 +22,9 @@ const FormPago = () => {
 
   const [nombre, setNombre] = React.useState('');
   const [correo, setCorreo] = React.useState('');
+  const [numeroTarjeta, setNumeroTarjeta] = React.useState('');
+  const [cvv, setCvv] = React.useState('');
+  const [fechaVencimiento, setFechaVencimiento] = React.useState('');
 
   const handleIncrement = () => {
     setTicketCount(prevCount => prevCount + 1);
@@ -33,8 +36,34 @@ const FormPago = () => {
 
   const totalAmount = ticketCount * ticketPrice;
 
+  const validateNombre = (value) => /^[a-zA-Z\s]+$/.test(value);
+  const validateNumeroTarjeta = (value) => /^\d*$/.test(value);
+  const validateCvv = (value) => /^\d{0,3}$/.test(value);
+  const validateFechaVencimiento = (value) => /^(0[1-9]|1[0-2])\/?\d{0,4}$/.test(value);
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!validateNombre(nombre)) {
+      alert('El nombre solo debe contener letras y espacios.');
+      return;
+    }
+
+    if (!validateNumeroTarjeta(numeroTarjeta)) {
+      alert('El número de tarjeta solo debe contener números.');
+      return;
+    }
+
+    if (!validateCvv(cvv)) {
+      alert('El CVV debe contener 3 números.');
+      return;
+    }
+
+    if (!validateFechaVencimiento(fechaVencimiento)) {
+      alert('La fecha de vencimiento debe tener el formato MM/YYYY.');
+      return;
+    }
+
     setIsModalOpen(true);
   };
 
@@ -62,7 +91,7 @@ const FormPago = () => {
         <div className="imagen-form"></div>
         <div className="form-container">
           <h2 className="form-title">
-          Formulario de Pago<br/>
+            Formulario de Pago<br/>
             Tour para {destinationTitle}
           </h2>
           
@@ -101,6 +130,7 @@ const FormPago = () => {
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
               required 
+              maxLength={100}
             />
             <label className="form-label">Correo electrónico</label>
             <input
@@ -116,7 +146,10 @@ const FormPago = () => {
               type="text"
               placeholder="XXXX XXXX XXXX XXXX"
               className="form-input"
+              value={numeroTarjeta}
+              onChange={(e) => setNumeroTarjeta(e.target.value)}
               required 
+              maxLength={19} // Ajusta el maxLength según el formato
             />
             <div className="form-row">
               <div className="form-group">
@@ -125,7 +158,10 @@ const FormPago = () => {
                   type="text"
                   placeholder="Ej. 123"
                   className="form-input redux-input"
+                  value={cvv}
+                  onChange={(e) => setCvv(e.target.value)}
                   required 
+                  maxLength={3}
                 />
               </div>
               <div className="form-group">
@@ -134,7 +170,10 @@ const FormPago = () => {
                   type="text"
                   placeholder="MM/YYYY"
                   className="form-input redux-input"
+                  value={fechaVencimiento}
+                  onChange={(e) => setFechaVencimiento(e.target.value)}
                   required 
+                  maxLength={7} // MM/YYYY
                 />
               </div>
             </div>
