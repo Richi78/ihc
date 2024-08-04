@@ -13,6 +13,8 @@ import dateIcon from '../../assets/date2.png';
 import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
+import Carrusel from '../Carrusel/CarruselTarata';
+
 const DestinoTarata = () => {
 
     const ticketPrice = 150; 
@@ -93,7 +95,7 @@ const DestinoTarata = () => {
               />
             ))}
              </div>
-          
+             <Carrusel/>
         </div>
         <div className="piejaja">
             <Footer />

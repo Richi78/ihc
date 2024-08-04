@@ -10,8 +10,8 @@ import { useAuth } from './Autenticacion';
 const Autorizacion = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
-  const [view, setView] = useState('login'); // Cambia el estado para mostrar login, register, link
-  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [view, setView] = useState('login');
+  const [showPassword, setShowPassword] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenPw, setIsModalOpenPw] = useState(false);
   const [nombre, setNombre] = useState('');
