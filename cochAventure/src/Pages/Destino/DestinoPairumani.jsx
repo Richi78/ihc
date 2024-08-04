@@ -7,12 +7,14 @@ import Informacion from './Informacion';
 import itinerarioImg from '../../assets/itinerario.png';
 import informacionImg from '../../assets/lista.png';
 import rutasImg from '../../assets/la-carretera.png';
-import './Destino.jsx'
+import './Destino.jsx';
 import busIcon from '../../assets/bus2.png';
 import dateIcon from '../../assets/date2.png';
 import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
+import Carrusel from '../Carrusel/CarruselPairumani';
+
 import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 const DestinoPairumani = () => {
   const ticketPrice = 150; 
@@ -82,7 +84,6 @@ const DestinoPairumani = () => {
     
           <Detalles items={detallesItems} />
     
-        
           <div className="segmento-tres">
             {tarjetasItems.map((item, index) => (
               <Tarjeta
@@ -93,14 +94,14 @@ const DestinoPairumani = () => {
                 lugar={item.lugar}
               />
             ))}
-             </div>
-          
+          </div>
+            <Carrusel/>
         </div>
         <div className="piejaja">
             <Footer />
-          </div>
+        </div>
         </div>
       );
 }
 
-export default DestinoPairumani
+export default DestinoPairumani;
