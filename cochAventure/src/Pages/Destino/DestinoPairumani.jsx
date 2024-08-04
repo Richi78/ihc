@@ -95,6 +95,7 @@ const DestinoPairumani = () => {
               />
             ))}
           </div>
+          <h1 className="centrado">Más imágenes</h1>
             <Carrusel/>
         </div>
         <div className="piejaja">

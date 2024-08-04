@@ -83,3 +83,8 @@
   .footer {
     margin-top: auto;
 }
+
+.centrado {
+  text-align: center;
+  padding: 20px;
+}

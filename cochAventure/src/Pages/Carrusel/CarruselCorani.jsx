@@ -27,7 +27,7 @@ const CarruselPairumani = () => {
           <img src='https://www.lostiempos.com/sites/default/files/styles/noticia_home_apertura_2/public/galerias/20237/dsc_3022.jpg?itok=dD3WPLv9' alt="Image 3" />
         </div>
         <div>
-          <img src='https://www.urgente.bo/sites/default/files/corani.jpg' alt="Image 4" />
+          <img src='https://www.lostiempos.com/sites/default/files/styles/noticia_home_apertura_2/public/galerias/20212/dsc_7667.jpg?itok=8mZXOF7p' alt="Image 4" />
         </div>
       </Carousel>
     </div>
