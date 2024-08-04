@@ -28,6 +28,7 @@ const MigasDePan = () => {
     'favoritos': 'Favoritos',
     'acerca': 'Acerca de Nosotros',
     'nocontent': 'Pagina no Disponible',
+    'autorizacion': 'Inicio de sesion o Registro',
     
   };
 
