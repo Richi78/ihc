@@ -1,10 +1,12 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toVillaTunari from "../../assets/toVillaTunari.png";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const RutaVillaTunari = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Villa Tunari</h1>
@@ -22,7 +24,9 @@ const RutaVillaTunari = () => {
               biodiversidad y las maravillas naturales de Bolivia.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/YvP9beWEZNeG1Vv96" target="_blank" rel="noopener noreferrer">
             <h2>Primera parada - Cascada Velo de Novia Chocolatal</h2>
+            </a>
             <br />
             <p>
               Es una subida por sendero, inicia a lado del rio sendero poco
@@ -31,7 +35,9 @@ const RutaVillaTunari = () => {
               mucho cuidado en ese tramo para bajar.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/gbz4ZWYi1xV1iBmU8" target="_blank" rel="noopener noreferrer">
             <h2>Segunda parada - Puente Colgante Gral. Barrientos</h2>
+            </a>
             <br />
             <p>
               El Puente Colgante Gral. Barrientos es una estructura emblemática

@@ -4,10 +4,12 @@ import Personas from '../../assets/personas.png';
 import Privacidad from '../../assets/privacidad.png'; 
 import Mision from '../../assets/mision.png'; 
 import Medios from '../../assets/medios.png'; 
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const Destino = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="container-acerca">
         <div className="acerca-content">
           
@@ -55,7 +57,9 @@ const Destino = () => {
               CochaAventure ha sido destacado en varios medios de comunicación
               por la calidad y exclusividad de nuestros tours. A lo largo de los
               años, hemos recibido reconocimiento por nuestra dedicación al
-              turismo sostenible y la promoción de la cultura local.
+              turismo sostenible y la promoción de la cultura local. Si deseas ver nuestra presencia en los medios, 
+              en nuestra sección de contacto 
+              encontrarás iconos que te redijirán a nuestras redes sociales.
             </p>
           </div>
         </div>

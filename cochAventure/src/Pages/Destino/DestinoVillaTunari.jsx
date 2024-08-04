@@ -14,6 +14,7 @@ import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
 import Carrusel from '../Carrusel/CarruselTunari';
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 
 const DestinoVillaTunari = () => {
   const ticketPrice = 175; 
@@ -25,8 +26,8 @@ const DestinoVillaTunari = () => {
     {
       title: "INCLUYE",
       items: [
-        { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-        { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+        { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+        { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
         { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
       ]
     },
@@ -46,11 +47,11 @@ const DestinoVillaTunari = () => {
           text: "175 Bs x Persona",
           buttons: [
             { label: 'Comprar Tour', 
-            onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+            onClick:() => {navigate('/villatunari/formp',{state:{ticketPrice, destinationTitle}})} 
           },
             {
               label: 'Reservar Tour',
-              onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
+              onClick: () => {navigate('/villatunari/formr', { state: { ticketPrice , destinationTitle} });
               },
             },
           ],
@@ -77,12 +78,13 @@ const DestinoVillaTunari = () => {
       image: rutasImg,
       title: "Rutas",
       description:
-        "Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.",
+        "Aquí encontrarás la ruta que realizará el transporte para llegar a Villa Tunari.",
         lugar:'actividadvillatunari'
     },
   ];
   return (
     <div className="page">
+      <MigasDePan/>
       <div className="destino-container">
         <Informacion
           title="Villa Tunari"

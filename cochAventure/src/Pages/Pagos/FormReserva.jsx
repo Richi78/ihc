@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Modal from 'react-modal';
 import './FormPago.css';
-
+import MigasDePan from '../../Components/Navigation/MigasDePan';
 import visa from '../../assets/visa.png';
 import qr from '../../assets/qr.png';
 import master from '../../assets/master.png';
@@ -44,7 +44,7 @@ const FormReserva = () => {
   const handleConfirm = () => {
     setIsModalOpen(false);
 
-    navigate('/comprobante', {
+    navigate(`/${destinationTitle}/formr/comprobante`, {
       state: {
         nombre,
         correo,
@@ -60,6 +60,7 @@ const FormReserva = () => {
 
   return (
     <div className="page">
+      <MigasDePan/>
       <div className="container">
         <div className="imagen-form"></div>
         <div className="form-container">

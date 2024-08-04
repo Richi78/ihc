@@ -24,7 +24,7 @@
 }
 
 .nav-options {
-    width: 50%;
+    width: auto;
     display: flex;
     gap: 2rem;
     padding-right: 2rem;

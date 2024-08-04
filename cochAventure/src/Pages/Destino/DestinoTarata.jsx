@@ -14,6 +14,7 @@ import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
 import Carrusel from '../Carrusel/CarruselTarata';
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 
 const DestinoTarata = () => {
 
@@ -25,8 +26,8 @@ const DestinoTarata = () => {
         {
           title: 'INCLUYE',
           items: [
-            { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-            { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+            { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+            { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
             { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
           ]
         },
@@ -46,11 +47,11 @@ const DestinoTarata = () => {
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+                onClick:() => {navigate('/tarata/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
+                  onClick: () => {navigate('/tarata/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]
@@ -61,10 +62,11 @@ const DestinoTarata = () => {
       const tarjetasItems = [
         { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadtarata' },
         { image: informacionImg, title: 'Información', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadtarata' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'actividadtarata' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Tarata.', lugar:'actividadtarata' },
       ];
       return (
         <div className='page'>
+          <MigasDePan/>
         <div className="destino-container">
            <Informacion
             title="Tarata"

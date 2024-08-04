@@ -1,10 +1,12 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toPairumani from "../../assets/toPairumani.png";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const RutaPairumani = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Pairumani</h1>
@@ -22,7 +24,9 @@ const RutaPairumani = () => {
               Patiño.
             </p>
             <br />
-            <h2>Primera parada - Campo Verde Huayruritos II</h2>
+            <a href="https://maps.app.goo.gl/ufucGXEFoAhSCrio6" target="_blank" rel="noopener noreferrer">
+              <h2>Primera parada - Campo Verde Huayruritos II</h2>
+            </a>
             <br />
             <p>
               Es un local ubicado en plena Av. Blanco Galindo. Es muy concurrido
@@ -31,7 +35,9 @@ const RutaPairumani = () => {
               es al vivo y se presentan diferentes grupos de música popular.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/QftkLdxNGdhH29VQ9" target="_blank" rel="noopener noreferrer">
             <h2>Segunda parada - Viva Vinto</h2>
+            </a>
             <br />
             <p>
               El restaurante Viva Vinto en Cochabamba es un lugar bonito y con

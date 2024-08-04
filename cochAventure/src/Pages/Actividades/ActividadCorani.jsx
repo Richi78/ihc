@@ -1,12 +1,14 @@
 import Footer from "../../Components/Footer/Footer";
 import "./Actividades.css";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const ActividadCorani = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="bg-background p-6">
         <div className="titulo-itinerario">
-          <h1 className="text-2xl font-bold subrayado">ITINERARIO</h1>
+          <h1 className="text-2xl font-bold subrayado">ITINERARIO - CORANI</h1>
         </div>
 
         <div className="act">
@@ -42,7 +44,7 @@ const ActividadCorani = () => {
               <p className="act3"> 
                 Los paseos que se realizan en la laguna de Corani ofrece una
                 experiencia auténtica, donde los visitantes pueden sumergirse en
-                la vida cotidiana de la comunidad local. Los vendedores suelen
+                la vida cotidiana de la comunidad local. Los vendedores locales suelen
                 ofrecer productos frescos y tradicionales, lo que permite a los
                 visitantes experimentar la gastronomía y los productos típicos
                 de la región.

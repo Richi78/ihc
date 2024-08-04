@@ -1,10 +1,12 @@
 import "./Ruta.css";
 import Footer from "../../Components/Footer/Footer";
 import toTarata from "../../assets/toTarata.png";
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 
 const RutaTarata = () => {
   return (
     <div className="page">
+      <MigasDePan />
       <div className="rute-container">
         <div className="target-title">
           <h1>Tarata</h1>
@@ -16,12 +18,14 @@ const RutaTarata = () => {
           <div className="target-right">
             <h1>Ruta establecida</h1>
             <br />
-            Tarata es un destino histórico y culturalmente rico que ofrece una
+            <p>Tarata es un destino histórico y culturalmente rico que ofrece una
             experiencia auténtica de la vida en una pequeña ciudad boliviana. El
             viaje es corto y la ruta es relativamente fácil, ya sea en auto o en
-            transporte público.
+            transporte público.</p>
             <br />
+            <a href="https://maps.app.goo.gl/5E5zvE6kocNV18ns9" target="_blank" rel="noopener noreferrer">
             <h2>Primera parada - Laguna La Angostura Cochabamba</h2>
+            </a>
             <br />
             <p>
               Angostura ofrece una vista de un paisaje que persiste a lo largo
@@ -31,7 +35,9 @@ const RutaTarata = () => {
               lugar frio.
             </p>
             <br />
+            <a href="https://maps.app.goo.gl/XmTZ7CLNWrvU9SYv8" target="_blank" rel="noopener noreferrer">
             <h2>Segunda parada - Restaurant 3 hermanas</h2>
+            </a>
             <br />
             <p>
               Es el destino perfecto para los amantes del pescado fresco y los

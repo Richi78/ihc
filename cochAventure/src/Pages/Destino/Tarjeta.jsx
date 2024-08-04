@@ -6,19 +6,19 @@ const Tarjeta = ({ image, title, description, lugar }) => {
   const handleClick = () => {
     
     if (title === "Itinerario" && lugar === "actividadcorani"){
-      navigate('/'+lugar)
+      navigate('/corani/'+lugar)
     }
     if (title === "Itinerario" && lugar === "actividadincallajta"){
-      navigate('/'+lugar)
+      navigate('/incallajta/'+lugar)
     }
     if (title === "Itinerario" && lugar === "actividadpairumani"){
-      navigate('/'+lugar)
+      navigate('/pairumani/'+lugar)
     }
     if (title === "Itinerario" && lugar === "actividadtarata"){
-      navigate('/'+lugar)
+      navigate('/tarata/'+lugar)
     }
     if (title === "Itinerario" && lugar === "actividadvillatunari"){
-      navigate('/'+lugar)
+      navigate('/villatunari/'+lugar)
     }
 
     if (title === "Información" && lugar === "actividadcorani"){
@@ -38,19 +38,19 @@ const Tarjeta = ({ image, title, description, lugar }) => {
     }
 
     if (title === "Rutas" && lugar === "actividadcorani"){
-      navigate('/rutacorani')
+      navigate('/corani/rutacorani')
     }
     if (title === "Rutas" && lugar === "actividadincallajta"){
-      navigate('/rutaincallajta')
+      navigate('/incallajta/rutaincallajta')
     }
     if (title === "Rutas" && lugar === "actividadpairumani"){
-      navigate('/rutapairumani')
+      navigate('/pairumani/rutapairumani')
     }
     if (title === "Rutas" && lugar === "actividadtarata"){
-      navigate('/rutatarata')
+      navigate('/tarata/rutatarata')
     }
     if (title === "Rutas" && lugar === "actividadvillatunari"){
-      navigate('/rutavillatunari')
+      navigate('/villatunari/rutavillatunari')
     }
     
   }

@@ -1,7 +1,7 @@
 import "./noContent.css";
 import { useNavigate} from 'react-router-dom';
 import Footer from "../../Components/Footer/Footer";
-
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 const Destino = () => {
   const navigate = useNavigate();
   
@@ -10,10 +10,11 @@ const Destino = () => {
   }
   return (
     <div className="page">
+      <MigasDePan />
         <div className="noContent-title">
             <img src="https://www.shutterstock.com/image-vector/road-construction-workers-paving-asphalt-600nw-2021981651.jpg" alt="en construccion" />
         <h2>Lo sentimos está sección del sitio está en construcción</h2>
-        <p>Por favor vuelve al <label onClick={handleInicio}>Inicio</label></p>
+        <p>Por favor vuelve a la página anterior, o sigue explorando destinos turísticos en <label onClick={handleInicio}>Inicio</label></p>
         
         </div>
         

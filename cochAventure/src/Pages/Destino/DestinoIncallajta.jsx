@@ -14,6 +14,7 @@ import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
 import Carrusel from '../Carrusel/CarruselInca';
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 
 const DestinoIncallajta = () => {
     const ticketPrice = 200;
@@ -24,8 +25,8 @@ const DestinoIncallajta = () => {
         {
           title: 'INCLUYE',
           items: [
-            { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-            { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+            { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+            { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
             { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
           ]
         },
@@ -45,11 +46,11 @@ const DestinoIncallajta = () => {
               text: '200 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+                onClick:() => {navigate('/incallajta/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice,destinationTitle } });
+                  onClick: () => {navigate('/incallajta/formr', { state: { ticketPrice,destinationTitle } });
                   },
                 },
               ]
@@ -60,10 +61,11 @@ const DestinoIncallajta = () => {
       const tarjetasItems = [
         { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar:'actividadincallajta' },
         { image: informacionImg, title: 'Información', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar:'actividadincallajta' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar:'actividadincallajta' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Incallajta.', lugar:'actividadincallajta' },
       ];
       return (
         <div className='page'>
+          <MigasDePan/>
         <div className="destino-container">
            <Informacion
             title="Incallajta"

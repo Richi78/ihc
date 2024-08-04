@@ -1,6 +1,6 @@
 import CardHome from "../../Components/CardHome/CardHome";
 import Footer from "../../Components/Footer/Footer";
-
+import MigasDePan from "../../Components/Navigation/MigasDePan";
 const Favoritos = () => {
   const destinos = [
     {
@@ -16,6 +16,7 @@ const Favoritos = () => {
 
   return (
     <div className="page">
+      <MigasDePan />
       <div className="maincito">
         <section className="destinos destinos-message">
           <div>

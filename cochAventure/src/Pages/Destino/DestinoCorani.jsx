@@ -14,6 +14,7 @@ import foodIcon from '../../assets/food2.png';
 import timeIcon from '../../assets/time2.png'; 
 import guiaIcon from '../../assets/guia2.png'; 
 import Carrusel from '../Carrusel/CarruselCorani';
+import MigasDePan from '../../Components/Navigation/MigasDePan';
 
 const DestinoCorani = () => {
     const ticketPrice = 100; 
@@ -24,8 +25,8 @@ const DestinoCorani = () => {
         {
             title: 'INCLUYE',
             items: [
-                { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-                { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+                { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+                { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
                 { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
             ]
         },
@@ -34,7 +35,7 @@ const DestinoCorani = () => {
             items: [
                 { icon: timeIcon, text: 'Duración: 1 Día' },
                 { icon: dateIcon, text: 'Fecha salida: 06/08/2024' },
-                { icon: '', text: "_____ Fecha llegada: 06/08/2024" }
+                { icon: '', text: "Fecha llegada: 06/08/2024" }
             ]
         },
         {
@@ -45,11 +46,11 @@ const DestinoCorani = () => {
                     text: '100 Bs x Persona',
                     buttons: [
                       { label: 'Comprar Tour', 
-                      onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle }})} 
+                      onClick:() => {navigate('/corani/formp',{state:{ticketPrice, destinationTitle }})} 
                     },
                       {
                         label: 'Reservar Tour',
-                        onClick: () => {navigate('/formr', { state: { ticketPrice, destinationTitle  } });
+                        onClick: () => {navigate('/corani/formr', { state: { ticketPrice, destinationTitle  } });
                         },
                       },
                     ],
@@ -74,13 +75,14 @@ const DestinoCorani = () => {
         { 
             image: rutasImg, 
             title: 'Rutas', 
-            description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Pairumani.', 
+            description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Corani.', 
             lugar: 'actividadcorani' 
         },
     ];
 
     return (
         <div className='page'>
+            <MigasDePan />
             <div className="destino-container">
                 <Informacion
                     title="Corani"

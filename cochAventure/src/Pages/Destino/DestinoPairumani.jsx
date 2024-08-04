@@ -15,6 +15,7 @@ import timeIcon from '../../assets/time2.png';
 import guiaIcon from '../../assets/guia2.png';
 import Carrusel from '../Carrusel/CarruselPairumani';
 
+import MigasDePan from '../../Components/Navigation/MigasDePan.jsx';
 const DestinoPairumani = () => {
   const ticketPrice = 150; 
 
@@ -25,8 +26,8 @@ const DestinoPairumani = () => {
         {
           title: 'INCLUYE',
           items: [
-            { icon: busIcon, text: 'Transporte ida y vuelta: Bus.' },
-            { icon: foodIcon, text: 'Desayuno, Refrigerio y almuerzo.' },
+            { icon: busIcon, text: 'Servicio de transporte de ida y vuelta en autobús.' },
+            { icon: foodIcon, text: 'Desayuno, refrigerio y almuerzo.' },
             { icon: guiaIcon, text: 'Guías completas durante el viaje.' }
           ]
         },
@@ -46,11 +47,11 @@ const DestinoPairumani = () => {
               text: '150 Bs x Persona',
               buttons: [
                 { label: 'Comprar Tour', 
-                onClick:() => {navigate('/formp',{state:{ticketPrice, destinationTitle}})} 
+                onClick:() => {navigate('/pairumani/formp',{state:{ticketPrice, destinationTitle}})} 
               },
                 {
                   label: 'Reservar Tour',
-                  onClick: () => {navigate('/formr', { state: { ticketPrice , destinationTitle} });
+                  onClick: () => {navigate('/pairumani/formr', { state: { ticketPrice , destinationTitle} });
                   },
                 },
               ]
@@ -61,10 +62,11 @@ const DestinoPairumani = () => {
       const tarjetasItems = [
         { image: itinerarioImg, title: 'Itinerario', description: 'En esta sección verá un itinerario completo del viaje con sus actividades respectivas.', lugar: 'actividadpairumani' },
         { image: informacionImg, title: 'Información', description: 'Acá encontrarás información necesaria para tu viaje como por ejemplo que llevar.', lugar: 'actividadpairumani' },
-        { image: rutasImg, title: 'Rutas', description: 'Aquí encontraras la ruta que realizará el transporte para llegar a Pairumani.', lugar: 'actividadpairumani' },
+        { image: rutasImg, title: 'Rutas', description: 'Aquí encontrarás la ruta que realizará el transporte para llegar a Pairumani.', lugar: 'actividadpairumani' },
       ];
       return (
         <div className='page'>
+          <MigasDePan/>
         <div className="destino-container">
            <Informacion
             title="Parque Ecoturistico Pairumani"
